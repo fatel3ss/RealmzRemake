@@ -1,0 +1,12 @@
+{
+   "BYWATER_extrafloor" : 
+   {
+      "img_ptr" : "BYWATER_FL_extra",
+      "type" : "ground"
+   },
+   "BYWATER_FN_charpick" :
+   {
+      "img_ptr" : "BYWATER_FN_charpick",
+      "type" : "furnitures"
+   },
+}

@@ -1,0 +1,1238 @@
+{
+   "CASTLE_FLL_glyph1_bl" : 
+   {
+      "0_ref_x" : 9,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph1_br" : 
+   {
+      "0_ref_x" : 10,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph1_tl" : 
+   {
+      "0_ref_x" : 7,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph1_tr" : 
+   {
+      "0_ref_x" : 8,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph2_bl" : 
+   {
+      "0_ref_x" : 13,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph2_br" : 
+   {
+      "0_ref_x" : 14,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph2_tl" : 
+   {
+      "0_ref_x" : 11,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph2_tr" : 
+   {
+      "0_ref_x" : 12,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph3_bl" : 
+   {
+      "0_ref_x" : 17,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph3_br" : 
+   {
+      "0_ref_x" : 18,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph3_tl" : 
+   {
+      "0_ref_x" : 15,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph3_tr" : 
+   {
+      "0_ref_x" : 16,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph4_bl" : 
+   {
+      "0_ref_x" : 21,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph4_br" : 
+   {
+      "0_ref_x" : 22,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph4_tl" : 
+   {
+      "0_ref_x" : 19,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_glyph4_tr" : 
+   {
+      "0_ref_x" : 20,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_grate" : 
+   {
+      "0_ref_x" : 44,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_ladderd" : 
+   {
+      "0_ref_x" : 6,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_leverd" : 
+   {
+      "0_ref_x" : 5,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_leveru" : 
+   {
+      "0_ref_x" : 4,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_paper" : 
+   {
+      "0_ref_x" : 0,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_cbl1" : 
+   {
+      "0_ref_x" : 36,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_cbl2" : 
+   {
+      "0_ref_x" : 37,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_cbr1" : 
+   {
+      "0_ref_x" : 40,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_cbr2" : 
+   {
+      "0_ref_x" : 41,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_ctl1" : 
+   {
+      "0_ref_x" : 38,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_ctl2" : 
+   {
+      "0_ref_x" : 39,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_ctr1" : 
+   {
+      "0_ref_x" : 42,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_ctr2" : 
+   {
+      "0_ref_x" : 43,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_sd" : 
+   {
+      "0_ref_x" : 35,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_sl" : 
+   {
+      "0_ref_x" : 32,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_sr" : 
+   {
+      "0_ref_x" : 33,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_pool_su" : 
+   {
+      "0_ref_x" : 34,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_skeleton" : 
+   {
+      "0_ref_x" : 3,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_skull" : 
+   {
+      "0_ref_x" : 1,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLL_treasure" : 
+   {
+      "0_ref_x" : 2,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_acid" : 
+   {
+      "0_ref_x" : 11,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_acid_platform" : 
+   {
+      "0_ref_x" : 12,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_lava" : 
+   {
+      "0_ref_x" : 13,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_lava_platform" : 
+   {
+      "0_ref_x" : 14,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_marble" : 
+   {
+      "0_ref_x" : 17,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_pit" : 
+   {
+      "0_ref_x" : 18,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_pit_full" : 
+   {
+      "0_ref_x" : 19,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug" : 
+   {
+      "0_ref_x" : 21,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_bl1" : 
+   {
+      "0_ref_x" : 24,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_bl2" : 
+   {
+      "0_ref_x" : 25,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_br1" : 
+   {
+      "0_ref_x" : 26,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_br2" : 
+   {
+      "0_ref_x" : 27,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_sd" : 
+   {
+      "0_ref_x" : 30,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_sl" : 
+   {
+      "0_ref_x" : 31,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_sr" : 
+   {
+      "0_ref_x" : 28,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_su" : 
+   {
+      "0_ref_x" : 29,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_tl1" : 
+   {
+      "0_ref_x" : 22,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_rug_tl2" : 
+   {
+      "0_ref_x" : 23,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stairs_down" : 
+   {
+      "0_ref_x" : 20,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone" : 
+   {
+      "0_ref_x" : 0,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_blood1" : 
+   {
+      "0_ref_x" : 3,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_blood2" : 
+   {
+      "0_ref_x" : 4,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_blood3" : 
+   {
+      "0_ref_x" : 5,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_crack" : 
+   {
+      "0_ref_x" : 1,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_grate" : 
+   {
+      "0_ref_x" : 6,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_puddle" : 
+   {
+      "0_ref_x" : 8,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_stain" : 
+   {
+      "0_ref_x" : 2,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_stone_trapdoor" : 
+   {
+      "0_ref_x" : 7,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_water" : 
+   {
+      "0_ref_x" : 9,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_water_platform" : 
+   {
+      "0_ref_x" : 10,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_wood_h" : 
+   {
+      "0_ref_x" : 15,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FLR_wood_v" : 
+   {
+      "0_ref_x" : 16,
+      "0_ref_y" : 0,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bag" : 
+   {
+      "0_ref_x" : 23,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bags" : 
+   {
+      "0_ref_x" : 24,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bagsflat" : 
+   {
+      "0_ref_x" : 34,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_barrels" : 
+   {
+      "0_ref_x" : 36,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bed_bunk_bl" : 
+   {
+      "0_ref_x" : 41,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bed_bunk_br" : 
+   {
+      "0_ref_x" : 42,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bed_bunk_tl" : 
+   {
+      "0_ref_x" : 39,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bed_bunk_tr" : 
+   {
+      "0_ref_x" : 40,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bed_whitel" : 
+   {
+      "0_ref_x" : 17,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bed_whiter" : 
+   {
+      "0_ref_x" : 18,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bedl" : 
+   {
+      "0_ref_x" : 8,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bedr" : 
+   {
+      "0_ref_x" : 9,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bookcase1" : 
+   {
+      "0_ref_x" : 20,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bookcase2" : 
+   {
+      "0_ref_x" : 21,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_bottles" : 
+   {
+      "0_ref_x" : 37,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_brasero" : 
+   {
+      "0_ref_x" : 27,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_chairl" : 
+   {
+      "0_ref_x" : 26,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_chairr" : 
+   {
+      "0_ref_x" : 25,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_chest_metal" : 
+   {
+      "0_ref_x" : 2,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_chest_wood" : 
+   {
+      "0_ref_x" : 3,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_chest_wood_big" : 
+   {
+      "0_ref_x" : 4,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_clothes" : 
+   {
+      "0_ref_x" : 38,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_coffinl" : 
+   {
+      "0_ref_x" : 33,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_coffinr" : 
+   {
+      "0_ref_x" : 34,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_columnb" : 
+   {
+      "0_ref_x" : 41,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_columnt" : 
+   {
+      "0_ref_x" : 40,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_crates" : 
+   {
+      "0_ref_x" : 35,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_desk" : 
+   {
+      "0_ref_x" : 43,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_dresser1" : 
+   {
+      "0_ref_x" : 22,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_dresser2" : 
+   {
+      "0_ref_x" : 23,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_H_B_1" : 
+   {
+      "0_ref_x" : 1,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_H_B_2" : 
+   {
+      "0_ref_x" : 2,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_H_B_3" : 
+   {
+      "0_ref_x" : 3,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_H_T_1" : 
+   {
+      "0_ref_x" : 43,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_H_T_2" : 
+   {
+      "0_ref_x" : 44,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_H_T_3" : 
+   {
+      "0_ref_x" : 0,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_V_L_1" : 
+   {
+      "0_ref_x" : 4,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_V_L_2" : 
+   {
+      "0_ref_x" : 5,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_V_R_1" : 
+   {
+      "0_ref_x" : 6,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_gate_V_R_2" : 
+   {
+      "0_ref_x" : 7,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_lab" : 
+   {
+      "0_ref_x" : 44,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_ladderu" : 
+   {
+      "0_ref_x" : 33,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_mirror" : 
+   {
+      "0_ref_x" : 19,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_orb" : 
+   {
+      "0_ref_x" : 32,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_piedestal" : 
+   {
+      "0_ref_x" : 39,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_rack1" : 
+   {
+      "0_ref_x" : 28,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_rack2" : 
+   {
+      "0_ref_x" : 29,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_rack3" : 
+   {
+      "0_ref_x" : 30,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_rack4" : 
+   {
+      "0_ref_x" : 31,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_rack5" : 
+   {
+      "0_ref_x" : 32,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_sarco_grayl" : 
+   {
+      "0_ref_x" : 6,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_sarco_grayr" : 
+   {
+      "0_ref_x" : 7,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_sarco_orangel" : 
+   {
+      "0_ref_x" : 37,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_sarco_oranger" : 
+   {
+      "0_ref_x" : 38,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_sarco_purlplel" : 
+   {
+      "0_ref_x" : 35,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_sarco_purlpler" : 
+   {
+      "0_ref_x" : 36,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_stairs_up" : 
+   {
+      "0_ref_x" : 21,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_statue_blue" : 
+   {
+      "0_ref_x" : 25,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_statue_demonb" : 
+   {
+      "0_ref_x" : 31,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_statue_demont" : 
+   {
+      "0_ref_x" : 30,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_statue_gray" : 
+   {
+      "0_ref_x" : 26,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_statue_green" : 
+   {
+      "0_ref_x" : 24,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_stool" : 
+   {
+      "0_ref_x" : 27,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_table_big_c_empty" : 
+   {
+      "0_ref_x" : 11,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_table_big_c_flasks" : 
+   {
+      "0_ref_x" : 12,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_table_big_c_junk" : 
+   {
+      "0_ref_x" : 13,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_table_big_l" : 
+   {
+      "0_ref_x" : 10,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_table_big_r" : 
+   {
+      "0_ref_x" : 14,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_tableplanks" : 
+   {
+      "0_ref_x" : 1,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_tablethings" : 
+   {
+      "0_ref_x" : 0,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_throneb" : 
+   {
+      "0_ref_x" : 29,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_thrones" : 
+   {
+      "0_ref_x" : 42,
+      "0_ref_y" : 1,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_thronet" : 
+   {
+      "0_ref_x" : 28,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_torch" : 
+   {
+      "0_ref_x" : 5,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_torturel" : 
+   {
+      "0_ref_x" : 15,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_FRN_torturer" : 
+   {
+      "0_ref_x" : 16,
+      "0_ref_y" : 2,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_in" : 
+   {
+      "0_ref_x" : 25,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_piped" : 
+   {
+      "0_ref_x" : 22,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_pipel" : 
+   {
+      "0_ref_x" : 24,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_pipelavad" : 
+   {
+      "0_ref_x" : 26,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_pipelaval" : 
+   {
+      "0_ref_x" : 28,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_pipelavar" : 
+   {
+      "0_ref_x" : 27,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_pipelavau" : 
+   {
+      "0_ref_x" : 29,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_piper" : 
+   {
+      "0_ref_x" : 23,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_pipeu" : 
+   {
+      "0_ref_x" : 25,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c1bl" : 
+   {
+      "0_ref_x" : 14,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c1br" : 
+   {
+      "0_ref_x" : 15,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c1tl" : 
+   {
+      "0_ref_x" : 16,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c1tr" : 
+   {
+      "0_ref_x" : 17,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c2bl" : 
+   {
+      "0_ref_x" : 21,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c2br" : 
+   {
+      "0_ref_x" : 22,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c2tl" : 
+   {
+      "0_ref_x" : 18,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_c2tr" : 
+   {
+      "0_ref_x" : 19,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_sd" : 
+   {
+      "0_ref_x" : 13,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_sd_clothpurple" : 
+   {
+      "0_ref_x" : 20,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_sd_torch" : 
+   {
+      "0_ref_x" : 24,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_sl" : 
+   {
+      "0_ref_x" : 11,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_sr" : 
+   {
+      "0_ref_x" : 12,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_sr_torch" : 
+   {
+      "0_ref_x" : 23,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thick_su" : 
+   {
+      "0_ref_x" : 10,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_01" : 
+   {
+      "0_ref_x" : 30,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_02" : 
+   {
+      "0_ref_x" : 31,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_03" : 
+   {
+      "0_ref_x" : 32,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_04" : 
+   {
+      "0_ref_x" : 33,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_05" : 
+   {
+      "0_ref_x" : 2,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_06" : 
+   {
+      "0_ref_x" : 3,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_07" : 
+   {
+      "0_ref_x" : 4,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_08" : 
+   {
+      "0_ref_x" : 5,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_09" : 
+   {
+      "0_ref_x" : 6,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_10" : 
+   {
+      "0_ref_x" : 7,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_11" : 
+   {
+      "0_ref_x" : 8,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_12" : 
+   {
+      "0_ref_x" : 9,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_Td" : 
+   {
+      "0_ref_x" : 41,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_Tl" : 
+   {
+      "0_ref_x" : 35,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_Tr" : 
+   {
+      "0_ref_x" : 34,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_Tu" : 
+   {
+      "0_ref_x" : 40,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_Tx" : 
+   {
+      "0_ref_x" : 42,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_cornerbl" : 
+   {
+      "0_ref_x" : 36,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_cornerbr" : 
+   {
+      "0_ref_x" : 37,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_cornertl" : 
+   {
+      "0_ref_x" : 38,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_cornertr" : 
+   {
+      "0_ref_x" : 39,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h" : 
+   {
+      "0_ref_x" : 9,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_clothgreen" : 
+   {
+      "0_ref_x" : 15,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_clothpurple" : 
+   {
+      "0_ref_x" : 10,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_clothred" : 
+   {
+      "0_ref_x" : 17,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_door_bars" : 
+   {
+      "0_ref_x" : 18,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_door_wood" : 
+   {
+      "0_ref_x" : 8,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_embrasure" : 
+   {
+      "0_ref_x" : 14,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_h_torch" : 
+   {
+      "0_ref_x" : 16,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_hl" : 
+   {
+      "0_ref_x" : 0,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_hr" : 
+   {
+      "0_ref_x" : 1,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_v" : 
+   {
+      "0_ref_x" : 13,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_v_door_bars" : 
+   {
+      "0_ref_x" : 19,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_v_door_wood" : 
+   {
+      "0_ref_x" : 20,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_v_embrasure" : 
+   {
+      "0_ref_x" : 11,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_v_torch" : 
+   {
+      "0_ref_x" : 12,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_vb" : 
+   {
+      "0_ref_x" : 43,
+      "0_ref_y" : 3,
+      "size" : "32x32"
+   },
+   "CASTLE_STR_wall_thin_vt" : 
+   {
+      "0_ref_x" : 26,
+      "0_ref_y" : 4,
+      "size" : "32x32"
+   }
+}

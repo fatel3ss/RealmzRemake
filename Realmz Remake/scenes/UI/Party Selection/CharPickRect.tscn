@@ -1,0 +1,192 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://shared_assets/UI/StonePatternRect9.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonSquareBitmask.png" type="BitMap" id=3]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyAddPressed.png" type="Texture" id=4]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyDropDisabled.png" type="Texture" id=5]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyAdd.png" type="Texture" id=6]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyAddHover.png" type="Texture" id=7]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyDrop.png" type="Texture" id=8]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyDropHover.png" type="Texture" id=9]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyAddDisabled.png" type="Texture" id=10]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonPartyDropPressed.png" type="Texture" id=11]
+[ext_resource path="res://scenes/UI/Party Selection/ButtonOK.png" type="Texture" id=12]
+[ext_resource path="res://scenes/UI/Party Selection/CharPickRect.gd" type="Script" id=13]
+[ext_resource path="res://scenes/UI/Party Selection/CharListRect.gd" type="Script" id=14]
+
+[node name="CharPickRect" type="NinePatchRect"]
+margin_left = 357.0
+margin_top = 56.0
+margin_right = 954.0
+margin_bottom = 531.0
+texture = ExtResource( 1 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 29.4737
+margin_top = 18.9474
+margin_right = 158.474
+margin_bottom = 35.9474
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Pick your Party  :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EligibleListRect" type="NinePatchRect" parent="."]
+margin_left = 8.59558
+margin_top = 84.0526
+margin_right = 228.596
+margin_bottom = 467.053
+mouse_filter = 0
+texture = ExtResource( 1 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EligibleLabel" type="Label" parent="EligibleListRect"]
+margin_left = 0.886444
+margin_top = -16.3435
+margin_right = 129.886
+margin_bottom = 0.65654
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Eligible Characters :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EligibleScrollContainer" type="ScrollContainer" parent="EligibleListRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+mouse_filter = 2
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EligibleVBoxContainer" type="VBoxContainer" parent="EligibleListRect/EligibleScrollContainer"]
+mouse_filter = 2
+custom_constants/separation = 0
+
+[node name="TeamListRect" type="NinePatchRect" parent="."]
+margin_left = 293.361
+margin_top = 79.6205
+margin_right = 513.361
+margin_bottom = 462.62
+mouse_filter = 0
+texture = ExtResource( 1 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeamLabel" type="Label" parent="TeamListRect"]
+margin_left = 0.886444
+margin_top = -16.3435
+margin_right = 129.886
+margin_bottom = 0.65654
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Selected Party :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeamScrollContainer" type="ScrollContainer" parent="TeamListRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeamVBoxContainer" type="VBoxContainer" parent="TeamListRect/TeamScrollContainer"]
+mouse_filter = 2
+custom_constants/separation = 0
+
+[node name="AddButton" type="TextureButton" parent="."]
+margin_left = 231.579
+margin_top = 103.047
+margin_right = 281.579
+margin_bottom = 153.047
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 10 )
+texture_click_mask = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropButton" type="TextureButton" parent="."]
+margin_left = 232.688
+margin_top = 160.665
+margin_right = 282.688
+margin_bottom = 210.665
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 5 )
+texture_click_mask = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OKButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 515.877
+margin_top = 424.868
+margin_right = 585.877
+margin_bottom = 474.868
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 12 )
+texture_click_mask = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestrictionsLabel" type="Label" parent="."]
+margin_left = 149.346
+margin_top = 18.3463
+margin_right = 505.346
+margin_bottom = 40.3463
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="AddButton" to="." method="_on_AddButton_pressed"]
+[connection signal="pressed" from="DropButton" to="." method="_on_DropButton_pressed"]

@@ -1,0 +1,9 @@
+{"name":"Elfrode", "level" : 1,"free":1,
+"inventory" : [
+{"texture":"[ImageTexture:5623]","imgdatasize":235,"imgdata":"H4sIAAAAAAAACusM8HPn5ZLiYmBg4PX0cAkC0gogzMEGJIurqr4AKcbiIHcnhnXnZF4COUs9XRxDIlrfTnvL26LA07bauoy1LYnV7YXOBiblK/bXKk7elbzl5vxmsoBKzZevuh0MB9cICFav2Zyl/u2e7aPXLFeifsbc13PIWBv5+DWLR0K/yQyZDwnnRCqShASqFVhaGo6z7nnt3NJRv/7e6n/xOsrNghODvdytn9fYTA9qu7bpAMOB3/ozRUyjrj5fsMxc/l7LpGylXxnZM88zOspsEOJrYZb6er9v7q1W3uwAR5eSz/1dQAczeLr6uaxzSmgCAG3p3mjrAAAA","name":"Dagger","type":"Dagger","sound":"metal hit.ogg","hands":1,"delete_on_empty":0,"slots":["Melee Weapon"],"equippable":1,"stats":{"EvasionMelee":3},"stats_mini":"Damage : 1-6","charges_max":0,"charges":0,"equipped":0,"tradeable":1,"weight":0,"charges_weight":0,"splittable":0,"_on_drop_source":"\n\tSfxPlayer.stream = NodeAccess.__Resources().sounds_book['generation error.ogg']\n\tSfxPlayer.play()\n\tprint('CAN T DROP DAGGER LOL')\n\titem['name'] = 'Cursed Undroppable Dagger'\n\treturn false\n","_on_drop":"[GDScript:5640]"}
+],
+"traits" : [
+"var name : String = 'character_creation_stats_mod'
+"
+]
+}

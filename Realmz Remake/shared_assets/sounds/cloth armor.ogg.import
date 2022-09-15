@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cloth armor.ogg-f0884cff5d91c7e5b89e008ccfd41c56.oggstr"
+
+[deps]
+
+source_file="res://shared_assets/sounds/cloth armor.ogg"
+dest_files=[ "res://.import/cloth armor.ogg-f0884cff5d91c7e5b89e008ccfd41c56.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

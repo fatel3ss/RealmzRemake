@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://shared_assets/UI/button_hover_styleboxtexture.tres" type="StyleBox" id=1]
+[ext_resource path="res://shared_assets/UI/button_normal_styleboxtexture.tres" type="StyleBox" id=2]
+[ext_resource path="res://shared_assets/UI/button_focus_styleboxtexture.tres" type="StyleBox" id=3]
+[ext_resource path="res://shared_assets/UI/button_disabled_styleboxtexture.tres" type="StyleBox" id=4]
+[ext_resource path="res://shared_assets/UI/button_pressed_styleboxtexture.tres" type="StyleBox" id=5]
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=6]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesYesNo.gd" type="Script" id=7]
+
+[node name="ChoicesYesNo" type="Control"]
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesYesNoBox" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -10.0
+margin_right = 40.0
+margin_bottom = -10.0
+size_flags_horizontal = 2
+size_flags_vertical = 4
+custom_constants/separation = -1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YesButton" type="Button" parent="ChoicesYesNoBox"]
+margin_right = 54.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+size_flags_horizontal = 3
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+text = "YES"
+
+[node name="NoButton" type="Button" parent="ChoicesYesNoBox"]
+margin_left = 53.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+size_flags_horizontal = 3
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "NO"
+
+[node name="ControlForty" type="Control" parent="ChoicesYesNoBox"]
+margin_left = 99.0
+margin_right = 139.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+[connection signal="pressed" from="ChoicesYesNoBox/YesButton" to="." method="_on_YesButton_pressed"]
+[connection signal="pressed" from="ChoicesYesNoBox/NoButton" to="." method="_on_NoButton_pressed"]

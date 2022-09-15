@@ -1,0 +1,109 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ItemSmallButton.gd" type="Script" id=2]
+[ext_resource path="res://shared_assets/Map Symbols/tileDark.png" type="Texture" id=3]
+[ext_resource path="res://scenes/UI/HUD/Inventory/EquippedGray.png" type="Texture" id=4]
+[ext_resource path="res://scenes/UI/HUD/Characters Panel/CharPanelSelectOn.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="ItemSmallButton" type="Button"]
+margin_right = 320.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 160, 40 )
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 40.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconEquipped" type="Sprite" parent="."]
+position = Vector2( 8, 4 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="IconSprite" type="Sprite" parent="."]
+position = Vector2( 8, 4 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="SpriteSelected" type="Sprite" parent="."]
+visible = false
+position = Vector2( -9, 0 )
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="ItemnameLabel" type="Label" parent="."]
+margin_left = 44.0
+margin_top = 4.0
+margin_right = 182.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Item Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IteminfoLabel" type="Label" parent="."]
+margin_left = 44.0
+margin_top = 20.0
+margin_right = 182.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Item Info"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemstatsLabel" type="Label" parent="."]
+margin_left = 115.0
+margin_top = 20.0
+margin_right = 315.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Stats"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChargesLabel" type="Label" parent="."]
+margin_left = 235.0
+margin_top = 4.0
+margin_right = 315.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "X 100 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="." to="." method="_on_ItemSmallButton_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_ItemSmallButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ItemSmallButton_mouse_exited"]

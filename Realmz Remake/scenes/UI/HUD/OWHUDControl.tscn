@@ -1,0 +1,3621 @@
+[gd_scene load_steps=149 format=2]
+
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://shared_assets/UI/StonePatternRect9.png" type="Texture" id=2]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonUse.png" type="Texture" id=3]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonShow.png" type="Texture" id=4]
+[ext_resource path="res://scenes/UI/HUD/Button_Items.png" type="Texture" id=5]
+[ext_resource path="res://shared_assets/UI/stone_pattern.png" type="Texture" id=6]
+[ext_resource path="res://shared_assets/UI/button50_hover_styleboxtexture.tres" type="StyleBox" id=7]
+[ext_resource path="res://shared_assets/UI/button50_normal_styleboxtexture.tres" type="StyleBox" id=8]
+[ext_resource path="res://shared_assets/UI/button50_pressed_styleboxtexture.tres" type="StyleBox" id=9]
+[ext_resource path="res://shared_assets/UI/button50_disabled_styleboxtexture.tres" type="StyleBox" id=10]
+[ext_resource path="res://shared_assets/UI/button_focus_styleboxtexture.tres" type="StyleBox" id=11]
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Fonts/theldrowremake.tres" type="DynamicFont" id=13]
+[ext_resource path="res://scenes/UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=14]
+[ext_resource path="res://scenes/UI/HUD/TextRect.gd" type="Script" id=15]
+[ext_resource path="res://scenes/UI/HUD/Inventory/InventoryRect.gd" type="Script" id=16]
+[ext_resource path="res://shared_assets/UI/buttonDone.png" type="Texture" id=17]
+[ext_resource path="res://scenes/UI/HUD/Inventory/TradeSelect.png" type="Texture" id=18]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonIdentify.png" type="Texture" id=19]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonIdentifyPay.png" type="Texture" id=20]
+[ext_resource path="res://shared_assets/UI/buttonShopText.png" type="Texture" id=21]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonDrop.png" type="Texture" id=22]
+[ext_resource path="res://scenes/UI/HUD/Button_CharSwap.png" type="Texture" id=23]
+[ext_resource path="res://scenes/UI/HUD/CharSwapRect.gd" type="Script" id=24]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesVBoxContainer.gd" type="Script" id=25]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesYesNo.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesButtonSeparator.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesStop.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/UI/Party Selection/CharPickRect.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/UI/HUD/OWHUDControl.gd" type="Script" id=30]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonJoin.png" type="Texture" id=31]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonSplit.png" type="Texture" id=32]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonHalfSquareBitmask.png" type="BitMap" id=33]
+[ext_resource path="res://scenes/UI/HUD/Looting/TreasureControl.gd" type="Script" id=34]
+[ext_resource path="res://scenes/UI/HUD/Looting/ItemLootButton.tscn" type="PackedScene" id=35]
+[ext_resource path="res://scenes/UI/HUD/Button_Settings.png" type="Texture" id=36]
+[ext_resource path="res://scenes/UI/HUD/Settings/SettingsRect.gd" type="Script" id=37]
+[ext_resource path="res://scenes/UI/HUD/Settings/MusicSettingsRect.gd" type="Script" id=38]
+[ext_resource path="res://scenes/UI/HUD/Button_Encounter.png" type="Texture" id=39]
+[ext_resource path="res://scenes/UI/HUD/Special Encounter/EncounterControl.gd" type="Script" id=40]
+[ext_resource path="res://scenes/UI/HUD/Special Encounter/ActionIcon.png" type="Texture" id=41]
+[ext_resource path="res://scenes/UI/HUD/Special Encounter/speak_icon.png" type="Texture" id=42]
+[ext_resource path="res://scenes/UI/HUD/Special Encounter/stop_icon.png" type="Texture" id=43]
+[ext_resource path="res://shared_assets/UI/buttonUP.png" type="Texture" id=44]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ItemSmallButton.tscn" type="PackedScene" id=45]
+[ext_resource path="res://scenes/UI/Main Menu/DefaultPortrait.png" type="Texture" id=46]
+[ext_resource path="res://shared_assets/UI/arrow_button_h.png" type="Texture" id=47]
+[ext_resource path="res://scenes/UI/HUD/Use Item Menu/UseItemRect.gd" type="Script" id=48]
+[ext_resource path="res://shared_assets/UI/button_hover_styleboxtexture.tres" type="StyleBox" id=49]
+[ext_resource path="res://shared_assets/UI/button_normal_styleboxtexture.tres" type="StyleBox" id=50]
+[ext_resource path="res://shared_assets/UI/button_disabled_styleboxtexture.tres" type="StyleBox" id=51]
+[ext_resource path="res://shared_assets/UI/button_pressed_styleboxtexture.tres" type="StyleBox" id=52]
+[ext_resource path="res://scenes/UI/HUD/Button_Camp.png" type="Texture" id=53]
+[ext_resource path="res://scenes/UI/HUD/Button_Rest.png" type="Texture" id=54]
+[ext_resource path="res://scenes/UI/HUD/Button_Save.png" type="Texture" id=55]
+[ext_resource path="res://scenes/UI/HUD/Button_Money.png" type="Texture" id=56]
+[ext_resource path="res://scenes/UI/HUD/MoneyRect/MoneyRect.gd" type="Script" id=57]
+[ext_resource path="res://shared_assets/UI/buttonPRESSED.png" type="Texture" id=58]
+[ext_resource path="res://scenes/UI/HUD/MoneyRect/gems.png" type="Texture" id=59]
+[ext_resource path="res://shared_assets/UI/arrow_button_v.png" type="Texture" id=60]
+[ext_resource path="res://scenes/UI/HUD/MoneyRect/coins.png" type="Texture" id=61]
+[ext_resource path="res://scenes/UI/HUD/MoneyRect/jewelry.png" type="Texture" id=62]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonWeapon.png" type="Texture" id=63]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonBodyArmor.png" type="Texture" id=64]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonLimbArmor.png" type="Texture" id=65]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonSupplies.png" type="Texture" id=66]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonStyle137.png" type="Texture" id=67]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ButtonBuyBack.png" type="Texture" id=68]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ShopRect.gd" type="Script" id=69]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ShopInventoryContainerShop.gd" type="Script" id=70]
+[ext_resource path="res://scenes/UI/HUD/Spells/CastSpellText.png" type="Texture" id=71]
+[ext_resource path="res://scenes/UI/HUD/Spells/AbortSpellText.png" type="Texture" id=72]
+[ext_resource path="res://shared_assets/UI/buttonDISABLED.png" type="Texture" id=73]
+[ext_resource path="res://scenes/UI/HUD/Spells/SpellLevelText.png" type="Texture" id=74]
+[ext_resource path="res://scenes/UI/HUD/Spells/PowerLevelText.png" type="Texture" id=75]
+[ext_resource path="res://scenes/UI/HUD/Spells/TargetImages/DoNotUse.png" type="Texture" id=78]
+[ext_resource path="res://scenes/UI/HUD/Spells/SpellsStatsBg.png" type="Texture" id=79]
+[ext_resource path="res://scenes/UI/HUD/Spells/SpellCostBg.png" type="Texture" id=80]
+[ext_resource path="res://scenes/UI/HUD/Button_Spells.png" type="Texture" id=81]
+[ext_resource path="res://scenes/UI/HUD/Spells/SpellsRect.gd" type="Script" id=82]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="InputEventKey" id=5]
+scancode = 73
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
+
+[sub_resource type="InputEventAction" id=7]
+action = "shortcut_Camp"
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
+
+[sub_resource type="InputEventAction" id=9]
+action = "shortcut_Rest"
+
+[sub_resource type="ShortCut" id=10]
+shortcut = SubResource( 9 )
+
+[sub_resource type="InputEventAction" id=11]
+action = "shortcut_Spells"
+
+[sub_resource type="ShortCut" id=12]
+shortcut = SubResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 47 )
+region_rect = Rect2( 0, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 47 )
+region_rect = Rect2( 25, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 47 )
+region_rect = Rect2( 50, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=21]
+texture = ExtResource( 47 )
+region_rect = Rect2( 75, 0, 25, 50 )
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxTexture" id=23]
+texture = ExtResource( 47 )
+region_rect = Rect2( 0, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 47 )
+region_rect = Rect2( 25, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=25]
+texture = ExtResource( 47 )
+region_rect = Rect2( 50, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 47 )
+region_rect = Rect2( 75, 0, 25, 50 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="InputEventAction" id=28]
+action = "shortcut_inventory_show_trade"
+pressed = true
+
+[sub_resource type="ShortCut" id=29]
+shortcut = SubResource( 28 )
+
+[sub_resource type="StyleBoxEmpty" id=30]
+
+[sub_resource type="StyleBoxEmpty" id=31]
+
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxEmpty" id=33]
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="InputEventAction" id=35]
+action = "shortcut_inventory_go_shop"
+
+[sub_resource type="ShortCut" id=36]
+shortcut = SubResource( 35 )
+
+[sub_resource type="InputEventAction" id=37]
+action = "shortcut_inventory_use"
+
+[sub_resource type="ShortCut" id=38]
+shortcut = SubResource( 37 )
+
+[sub_resource type="InputEventAction" id=39]
+action = "shortcut_inventory_identify_cast"
+
+[sub_resource type="ShortCut" id=40]
+shortcut = SubResource( 39 )
+
+[sub_resource type="InputEventAction" id=41]
+action = "shortcut_inventory_identify_pay"
+
+[sub_resource type="ShortCut" id=42]
+shortcut = SubResource( 41 )
+
+[sub_resource type="InputEventAction" id=43]
+action = "shortcut_inventory_drop"
+
+[sub_resource type="ShortCut" id=44]
+shortcut = SubResource( 43 )
+
+[sub_resource type="InputEventAction" id=45]
+action = "shortcut_inventory_done"
+
+[sub_resource type="ShortCut" id=46]
+shortcut = SubResource( 45 )
+
+[sub_resource type="InputEventAction" id=47]
+action = "shortcut_inventory_show_trade"
+
+[sub_resource type="ShortCut" id=48]
+shortcut = SubResource( 47 )
+
+[sub_resource type="InputEventAction" id=49]
+action = "shortcut_inventory_trade_item"
+
+[sub_resource type="ShortCut" id=50]
+shortcut = SubResource( 49 )
+
+[sub_resource type="StyleBoxTexture" id=51]
+texture = ExtResource( 67 )
+region_rect = Rect2( 100, 0, 50, 137 )
+
+[sub_resource type="StyleBoxTexture" id=52]
+texture = ExtResource( 67 )
+region_rect = Rect2( 50, 0, 50, 137 )
+
+[sub_resource type="StyleBoxTexture" id=53]
+texture = ExtResource( 67 )
+region_rect = Rect2( 150, 0, 50, 137 )
+
+[sub_resource type="StyleBoxTexture" id=54]
+texture = ExtResource( 67 )
+region_rect = Rect2( 0, 0, 50, 137 )
+
+[sub_resource type="InputEventAction" id=55]
+action = "shortcut_inventory_join"
+
+[sub_resource type="ShortCut" id=56]
+shortcut = SubResource( 55 )
+
+[sub_resource type="InputEventAction" id=57]
+action = "shortcut_inventory_split"
+
+[sub_resource type="ShortCut" id=58]
+shortcut = SubResource( 57 )
+
+[sub_resource type="InputEventAction" id=59]
+action = "shortcut_inventory_equip"
+
+[sub_resource type="ShortCut" id=60]
+shortcut = SubResource( 59 )
+
+[sub_resource type="StyleBoxTexture" id=61]
+texture = ExtResource( 47 )
+region_rect = Rect2( 25, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=62]
+texture = ExtResource( 47 )
+region_rect = Rect2( 0, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=63]
+texture = ExtResource( 47 )
+region_rect = Rect2( 75, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=64]
+texture = ExtResource( 47 )
+region_rect = Rect2( 50, 0, 25, 50 )
+
+[sub_resource type="StyleBoxTexture" id=65]
+texture = ExtResource( 60 )
+region_rect = Rect2( 0, 75, 50, 25 )
+
+[sub_resource type="StyleBoxTexture" id=66]
+texture = ExtResource( 60 )
+region_rect = Rect2( 0, 50, 50, 25 )
+
+[sub_resource type="StyleBoxTexture" id=67]
+texture = ExtResource( 60 )
+region_rect = Rect2( 0, 25, 50, 25 )
+
+[sub_resource type="StyleBoxTexture" id=68]
+texture = ExtResource( 60 )
+region_rect = Rect2( 0, 0, 50, 25 )
+
+[node name="OWHUDControl" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.18921
+margin_top = -0.948158
+margin_right = -1.18921
+margin_bottom = -0.948181
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharactersRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_bottom = 360.0
+mouse_filter = 0
+texture = ExtResource( 6 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharScrollContainer" type="ScrollContainer" parent="CharactersRect"]
+margin_right = 320.0
+margin_bottom = 360.0
+follow_focus = true
+scroll_horizontal_enabled = false
+scroll_deadzone = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharactersRect/CharScrollContainer"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeRect" type="NinePatchRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = 60.0
+margin_bottom = 100.0
+mouse_filter = 0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FatigueLabel" type="Label" parent="TimeRect"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 65.0
+margin_bottom = 22.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.25098, 0.25098, 0.25098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0.188235, 0.188235, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+custom_fonts/font = ExtResource( 12 )
+text = "Fatigue :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="TimeRect"]
+margin_left = 5.0
+margin_top = 20.0
+margin_right = 47.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.25098, 0.25098, 0.25098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0.188235, 0.188235, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+custom_fonts/font = ExtResource( 12 )
+text = "Time :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeCntrLabel" type="Label" parent="TimeRect"]
+margin_left = 52.0
+margin_top = 21.0
+margin_right = 156.0
+margin_bottom = 52.0
+text = "0d 24h 60m 60s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightLabel" type="Label" parent="TimeRect"]
+margin_left = 192.0
+margin_top = 20.0
+margin_right = 234.0
+margin_bottom = 55.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.25098, 0.25098, 0.25098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0.188235, 0.188235, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 1
+custom_fonts/font = ExtResource( 12 )
+text = "Light :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightCntrLabel" type="Label" parent="TimeRect"]
+margin_left = 234.551
+margin_top = 21.0
+margin_right = 338.551
+margin_bottom = 52.0
+text = "0 s
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightPCntrLabel" type="Label" parent="TimeRect"]
+margin_left = 294.0
+margin_top = 21.0
+margin_right = 317.0
+margin_bottom = 35.0
+text = "P:0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XLabel" type="Label" parent="TimeRect"]
+margin_left = 210.0
+margin_top = 5.0
+margin_right = 234.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "X :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YLabel" type="Label" parent="TimeRect"]
+margin_left = 270.0
+margin_top = 5.0
+margin_right = 294.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Y :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XnumberLabel" type="Label" parent="TimeRect"]
+margin_left = 240.0
+margin_top = 5.0
+margin_right = 264.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 12 )
+text = "0"
+
+[node name="YnumberLabel" type="Label" parent="TimeRect"]
+margin_left = 290.793
+margin_top = 4.42947
+margin_right = 314.793
+margin_bottom = 22.4295
+custom_fonts/font = ExtResource( 12 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotRightPanel" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = -200.0
+mouse_filter = 0
+texture = ExtResource( 6 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryButton" type="Button" parent="BotRightPanel"]
+margin_top = 50.0
+margin_right = 50.0
+margin_bottom = 100.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+shortcut = SubResource( 6 )
+icon = ExtResource( 5 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharSwapButton" type="Button" parent="BotRightPanel"]
+margin_left = 270.0
+margin_right = 320.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+disabled = true
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+icon = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsButton" type="Button" parent="BotRightPanel"]
+margin_left = 270.0
+margin_top = 150.0
+margin_right = 320.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+icon = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EncounterButton" type="Button" parent="BotRightPanel"]
+margin_top = 150.0
+margin_right = 50.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+icon = ExtResource( 39 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CampButton" type="Button" parent="BotRightPanel"]
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+shortcut = SubResource( 8 )
+icon = ExtResource( 53 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="BotRightPanel"]
+margin_left = 270.0
+margin_top = 100.0
+margin_right = 320.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 55 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyButton" type="Button" parent="BotRightPanel"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestButton" type="Button" parent="BotRightPanel"]
+margin_left = 50.0
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+shortcut = SubResource( 10 )
+icon = ExtResource( 54 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestTimer" type="Timer" parent="BotRightPanel/RestButton"]
+wait_time = 0.5
+one_shot = true
+
+[node name="SpellButton" type="Button" parent="BotRightPanel"]
+margin_top = 100.784
+margin_right = 50.0
+margin_bottom = 150.784
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut = SubResource( 12 )
+icon = ExtResource( 81 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextRect" type="NinePatchRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -200.0
+margin_right = 704.0
+margin_bottom = 1.0
+mouse_filter = 0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextRect"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 689.0
+margin_bottom = 185.0
+custom_colors/default_color = Color( 1, 1, 0, 1 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisablerButton" type="Button" parent="TextRect"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -401.0
+margin_right = 323.0
+margin_bottom = -3.05176e-05
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoicesVBoxContainer" type="VBoxContainer" parent="TextRect"]
+visible = false
+margin_left = 100.0
+margin_top = -400.0
+margin_right = 604.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+choices_button_tscn = ExtResource( 1 )
+separator_tscn = ExtResource( 27 )
+choices_yesno_tscn = ExtResource( 26 )
+choices_stop_tscn = ExtResource( 28 )
+
+[node name="SpellsRect" type="NinePatchRect" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 320, 400 )
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 82 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopContainer" type="HBoxContainer" parent="SpellsRect"]
+margin_right = 320.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 320, 0 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellLevelsRect" type="NinePatchRect" parent="SpellsRect/TopContainer"]
+margin_right = 100.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 100, 0 )
+texture = ExtResource( 44 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="SpellLevelsContainer" type="VBoxContainer" parent="SpellsRect/TopContainer/SpellLevelsRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 10.0
+margin_right = -5.0
+margin_bottom = -5.0
+rect_min_size = Vector2( 90, 0 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellsTextRect" type="NinePatchRect" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_right = 90.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+texture = ExtResource( 73 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SpellsTextRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -36.5
+margin_top = -9.0
+margin_right = 36.5
+margin_bottom = 9.0
+texture = ExtResource( 74 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SLevelButton1" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 20.0
+margin_right = 90.0
+margin_bottom = 53.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 1"
+
+[node name="SLevelButton2" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 53.0
+margin_right = 90.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 1, 0.831373, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 2"
+
+[node name="SLevelButton3" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 86.0
+margin_right = 90.0
+margin_bottom = 119.0
+custom_colors/font_color = Color( 1, 0.666667, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 3"
+
+[node name="SLevelButton4" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 119.0
+margin_right = 90.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 1, 0.498039, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 4"
+
+[node name="SLevelButton5" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 152.0
+margin_right = 90.0
+margin_bottom = 185.0
+custom_colors/font_color = Color( 1, 0.333333, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 5"
+
+[node name="SLevelButton6" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 185.0
+margin_right = 90.0
+margin_bottom = 218.0
+custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 6"
+
+[node name="SLevelButton7" type="Button" parent="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer"]
+margin_top = 218.0
+margin_right = 90.0
+margin_bottom = 251.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "Level 7"
+
+[node name="SpellsListRect" type="NinePatchRect" parent="SpellsRect/TopContainer"]
+margin_left = 100.0
+margin_right = 320.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 220, 0 )
+texture = ExtResource( 44 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SpellsRect/TopContainer/SpellsListRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellListContainer" type="VBoxContainer" parent="SpellsRect/TopContainer/SpellsListRect/ScrollContainer"]
+margin_right = 210.0
+rect_min_size = Vector2( 210, 0 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiddleContainer" type="HBoxContainer" parent="SpellsRect"]
+margin_top = 275.0
+margin_right = 320.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 320, 0 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerLevelsRect" type="NinePatchRect" parent="SpellsRect/MiddleContainer"]
+margin_right = 100.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 100, 0 )
+texture = ExtResource( 44 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="PowerLevelsContainer" type="VBoxContainer" parent="SpellsRect/MiddleContainer/PowerLevelsRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 10.0
+margin_right = -5.0
+margin_bottom = -5.0
+rect_min_size = Vector2( 90, 0 )
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerTextRect" type="NinePatchRect" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_right = 90.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+texture = ExtResource( 73 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PowerTextRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -42.0
+margin_top = -12.0
+margin_right = 38.0
+margin_bottom = 12.0
+texture = ExtResource( 75 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PLevelButton1" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 20.0
+margin_right = 90.0
+margin_bottom = 53.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+pressed = true
+text = "X 1"
+
+[node name="PLevelButton2" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 53.0
+margin_right = 90.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 0, 0.831373, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "X 2"
+
+[node name="PLevelButton3" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 86.0
+margin_right = 90.0
+margin_bottom = 119.0
+custom_colors/font_color = Color( 0, 0.666667, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "X 3"
+
+[node name="PLevelButton4" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 119.0
+margin_right = 90.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 0, 0.498039, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "X 4"
+
+[node name="PLevelButton5" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 152.0
+margin_right = 90.0
+margin_bottom = 185.0
+custom_colors/font_color = Color( 0, 0.333333, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "X 5"
+
+[node name="PLevelButton6" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 185.0
+margin_right = 90.0
+margin_bottom = 218.0
+custom_colors/font_color = Color( 0, 0.164706, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "X 6"
+
+[node name="PLevelButton7" type="Button" parent="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer"]
+margin_top = 218.0
+margin_right = 90.0
+margin_bottom = 251.0
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+toggle_mode = true
+text = "X 7"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SpellsRect/MiddleContainer"]
+margin_left = 100.0
+margin_right = 100.0
+margin_bottom = 275.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellInfoRect" type="NinePatchRect" parent="SpellsRect/MiddleContainer"]
+margin_left = 100.0
+margin_right = 320.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 220, 0 )
+texture = ExtResource( 44 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="SpellAoERect" type="NinePatchRect" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 74.0
+margin_bottom = 74.0
+rect_min_size = Vector2( 70, 70 )
+texture = ExtResource( 58 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AoETextureRect" type="TextureRect" parent="SpellsRect/MiddleContainer/SpellInfoRect/SpellAoERect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 78 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsRect" type="TextureRect" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 75.0
+margin_top = 4.0
+margin_right = 217.0
+margin_bottom = 74.0
+texture = ExtResource( 79 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DamageMinLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 61.0
+margin_top = 1.0
+margin_right = 91.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DamageMaxLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 106.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DurationMinLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 61.0
+margin_top = 18.0
+margin_right = 91.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DurationMaxLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 106.0
+margin_top = 18.0
+margin_right = 138.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RangeLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 55.0
+margin_top = 36.0
+margin_right = 73.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RotationLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 111.34
+margin_top = 35.6682
+margin_right = 133.34
+margin_bottom = 50.6682
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TargetsLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 55.0
+margin_top = 54.0
+margin_right = 73.0
+margin_bottom = 69.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoSLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/StatsRect"]
+margin_left = 111.34
+margin_top = 53.6682
+margin_right = 133.34
+margin_bottom = 68.6682
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttributesBgLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 5.0
+margin_top = 80.0
+margin_right = 74.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Attributes :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttributesBgLabel2" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 5.0
+margin_top = 163.0
+margin_right = 111.0
+margin_bottom = 177.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Cost Formula : :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttributesLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 5.0
+margin_top = 95.0
+margin_right = 215.0
+margin_bottom = 146.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "Ranged, Physical, Fire, Ice, Electric, Poison, Disease, Chemical, Magic, Healing"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostFormulaLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 4.0
+margin_top = 180.0
+margin_right = 214.0
+margin_bottom = 198.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "100*Power"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellCostBGRect" type="TextureRect" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+margin_left = 4.0
+margin_top = 202.0
+margin_right = 216.0
+margin_bottom = 251.0
+texture = ExtResource( 80 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/SpellCostBGRect"]
+margin_left = 11.7136
+margin_top = 31.7839
+margin_right = 80.7136
+margin_bottom = 45.7839
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SPCostLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/SpellCostBGRect"]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 112.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharaSPLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/SpellCostBGRect"]
+margin_left = 130.0
+margin_top = 32.0
+margin_right = 203.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "999999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharNameRect" type="NinePatchRect" parent="SpellsRect/MiddleContainer/SpellInfoRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -24.0
+margin_right = 216.0
+margin_bottom = -3.0
+texture = ExtResource( 58 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharNameLabel" type="Label" parent="SpellsRect/MiddleContainer/SpellInfoRect/CharNameRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "Samuel Rabreau, Main Dev"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomContainer" type="HBoxContainer" parent="SpellsRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+margin_right = 320.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CastButton" type="Button" parent="SpellsRect/BottomContainer"]
+margin_right = 110.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 110, 50 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="SpellsRect/BottomContainer/CastButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.5
+margin_top = -12.0
+margin_right = 50.5
+margin_bottom = 12.0
+texture = ExtResource( 71 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftButton" type="Button" parent="SpellsRect/BottomContainer"]
+margin_left = 110.0
+margin_right = 135.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 25, 50 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 19 )
+custom_styles/normal = SubResource( 18 )
+
+[node name="PortraitFrameRect" type="TextureRect" parent="SpellsRect/BottomContainer"]
+margin_left = 135.0
+margin_right = 185.0
+margin_bottom = 50.0
+texture = ExtResource( 58 )
+
+[node name="PortraitRect" type="TextureRect" parent="SpellsRect/BottomContainer/PortraitFrameRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -22.0
+margin_top = -22.0
+margin_right = 22.0
+margin_bottom = 22.0
+texture = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightButton" type="Button" parent="SpellsRect/BottomContainer"]
+margin_left = 185.0
+margin_right = 210.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 25, 50 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/normal = SubResource( 20 )
+
+[node name="AbortButton" type="Button" parent="SpellsRect/BottomContainer"]
+margin_left = 210.0
+margin_right = 320.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 110, 50 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="SpellsRect/BottomContainer/AbortButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -12.0
+margin_right = 28.0
+margin_bottom = 12.0
+texture = ExtResource( 72 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EncounterControl" type="Control" parent="."]
+visible = false
+margin_top = 350.0
+margin_right = 50.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 50, 50 )
+script = ExtResource( 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EncounterControl"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = -1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryButton" type="Button" parent="EncounterControl/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 50.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 22 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+shortcut = SubResource( 6 )
+icon = ExtResource( 5 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UseItemRect" type="NinePatchRect" parent="EncounterControl/HBoxContainer/InventoryButton"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 144.0
+margin_top = -270.0
+margin_right = 431.0
+margin_bottom = -38.0
+texture = ExtResource( 44 )
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 48 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftButton" type="Button" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect"]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 29.0
+margin_bottom = 53.0
+custom_styles/hover = SubResource( 23 )
+custom_styles/pressed = SubResource( 24 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/normal = SubResource( 23 )
+
+[node name="CharFaceRect" type="TextureRect" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect"]
+margin_left = 29.2165
+margin_top = 5.56763
+margin_right = 73.2165
+margin_bottom = 49.5676
+rect_min_size = Vector2( 44, 44 )
+texture = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightButton" type="Button" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect"]
+margin_left = 73.2964
+margin_top = 3.0
+margin_right = 98.2964
+margin_bottom = 53.0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/focus = SubResource( 25 )
+custom_styles/normal = SubResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharNameLabel" type="Label" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect"]
+margin_left = 113.363
+margin_top = 20.1298
+margin_right = 177.363
+margin_bottom = 37.1298
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Charname"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="itemsRect" type="ColorRect" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 53.0
+margin_right = -5.0
+margin_bottom = -50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect/itemsRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemContainer" type="GridContainer" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect/itemsRect/ScrollContainer"]
+custom_constants/vseparation = -1
+custom_constants/hseparation = -1
+columns = 14
+
+[node name="ItemPreview" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect" instance=ExtResource( 45 )]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -45.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="CancelButton" type="Button" parent="EncounterControl/HBoxContainer/InventoryButton/UseItemRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -104.0
+margin_top = -44.0
+margin_right = -12.0
+margin_bottom = -7.0
+custom_colors/font_color_disabled = Color( 0.501961, 0.627451, 0.627451, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0.752941, 0.752941, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionButton" type="Button" parent="EncounterControl/HBoxContainer"]
+margin_left = 49.0
+margin_right = 99.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+icon = ExtResource( 41 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakButton" type="Button" parent="EncounterControl/HBoxContainer"]
+margin_left = 98.0
+margin_right = 148.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+icon = ExtResource( 42 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="EncounterControl/HBoxContainer/SpeakButton"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -63.0
+margin_right = 210.0
+margin_bottom = -50.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="EncounterControl/HBoxContainer/SpeakButton/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -60.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakDoneButton" type="Button" parent="EncounterControl/HBoxContainer/SpeakButton/NinePatchRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -57.0
+margin_top = -25.0
+margin_right = -7.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Done"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StopButton" type="Button" parent="EncounterControl/HBoxContainer"]
+margin_left = 147.0
+margin_right = 197.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+icon = ExtResource( 43 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryRect" type="NinePatchRect" parent="."]
+visible = false
+margin_right = 704.0
+margin_bottom = 400.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InvScrollContainerR" type="ScrollContainer" parent="InventoryRect"]
+margin_left = 374.0
+margin_top = 10.0
+margin_right = 694.0
+margin_bottom = 350.0
+custom_styles/bg = SubResource( 27 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+is_hud_selected = true
+
+[node name="VBoxContainerR" type="VBoxContainer" parent="InventoryRect/InvScrollContainerR"]
+margin_right = 320.0
+size_flags_horizontal = 3
+
+[node name="ButtonTrade" type="Button" parent="InventoryRect"]
+margin_left = 10.0
+margin_top = 350.0
+margin_right = 73.0
+margin_bottom = 390.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+shortcut = SubResource( 29 )
+text = "Trade"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonShop" type="Button" parent="InventoryRect"]
+margin_left = 74.1785
+margin_top = 349.515
+margin_right = 114.179
+margin_bottom = 389.515
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 36 )
+icon = ExtResource( 21 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonUse" type="Button" parent="InventoryRect"]
+margin_left = 375.0
+margin_top = 350.0
+margin_right = 438.0
+margin_bottom = 390.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 38 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonIdentify" type="Button" parent="InventoryRect"]
+margin_left = 449.97
+margin_top = 349.903
+margin_right = 522.97
+margin_bottom = 389.903
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 40 )
+icon = ExtResource( 19 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonidentiPay" type="Button" parent="InventoryRect"]
+margin_left = 532.835
+margin_top = 350.272
+margin_right = 612.835
+margin_bottom = 390.272
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 42 )
+icon = ExtResource( 20 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDrop" type="Button" parent="InventoryRect"]
+margin_left = 627.7
+margin_top = 350.0
+margin_right = 693.7
+margin_bottom = 390.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 44 )
+icon = ExtResource( 22 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDone" type="Button" parent="InventoryRect"]
+margin_left = 332.0
+margin_top = 350.0
+margin_right = 372.0
+margin_bottom = 390.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 46 )
+icon = ExtResource( 17 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoRect" type="NinePatchRect" parent="InventoryRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_right = 704.0
+margin_bottom = 201.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoLabel" type="Label" parent="InventoryRect/InfoRect"]
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.98
+anchor_bottom = 0.98
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TradeRect" type="NinePatchRect" parent="InventoryRect"]
+visible = false
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 330.0
+margin_bottom = 400.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TradeYourselfLabel" type="Label" parent="InventoryRect/TradeRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -92.5
+margin_top = -8.5
+margin_right = 92.5
+margin_bottom = 8.5
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 2
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 2
+custom_fonts/font = ExtResource( 12 )
+text = "You can't trade with yourslelf !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InvScrollContainerL" type="ScrollContainer" parent="InventoryRect/TradeRect"]
+visible = false
+margin_right = 320.0
+margin_bottom = 340.0
+custom_styles/bg = SubResource( 27 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainerL" type="VBoxContainer" parent="InventoryRect/TradeRect/InvScrollContainerL"]
+margin_right = 320.0
+size_flags_horizontal = 3
+
+[node name="ButtonShow" type="Button" parent="InventoryRect/TradeRect"]
+margin_left = -0.535767
+margin_top = 340.55
+margin_right = 73.4642
+margin_bottom = 380.55
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 48 )
+icon = ExtResource( 4 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharTradeSelectGrid" type="GridContainer" parent="InventoryRect/TradeRect"]
+margin_left = 114.0
+margin_top = 340.0
+margin_right = 314.0
+margin_bottom = 380.0
+columns = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharSelectSprite" type="Sprite" parent="InventoryRect/TradeRect"]
+visible = false
+texture = ExtResource( 18 )
+
+[node name="ButtonTradeItem" type="Button" parent="InventoryRect/TradeRect"]
+margin_left = 71.0797
+margin_top = -65.9103
+margin_right = 153.08
+margin_bottom = -45.9103
+shortcut = SubResource( 50 )
+text = "Trade Item"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopRect" type="NinePatchRect" parent="InventoryRect"]
+margin_top = 10.0
+margin_right = 330.0
+margin_bottom = 400.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 69 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InvScrollContainerShop" type="ScrollContainer" parent="InventoryRect/ShopRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_right = -8.0
+margin_bottom = -50.0
+custom_styles/bg = SubResource( 27 )
+script = ExtResource( 70 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainerL" type="VBoxContainer" parent="InventoryRect/ShopRect/InvScrollContainerShop"]
+margin_right = 312.0
+size_flags_horizontal = 3
+
+[node name="ShopButtonsRect" type="NinePatchRect" parent="InventoryRect/ShopRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1.0
+margin_right = 44.0
+margin_bottom = 340.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponsButton" type="Button" parent="InventoryRect/ShopRect/ShopButtonsRect"]
+margin_left = -5.0
+margin_right = 45.0
+margin_bottom = 50.0
+custom_colors/font_color_disabled = Color( 0.627451, 0.627451, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 63 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BArmorButton" type="Button" parent="InventoryRect/ShopRect/ShopButtonsRect"]
+margin_left = -5.0
+margin_top = 50.0
+margin_right = 45.0
+margin_bottom = 100.0
+custom_colors/font_color_disabled = Color( 0.627451, 0.627451, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LArmorButton" type="Button" parent="InventoryRect/ShopRect/ShopButtonsRect"]
+margin_left = -5.0
+margin_top = 100.0
+margin_right = 45.0
+margin_bottom = 237.0
+custom_colors/font_color_disabled = Color( 0.627451, 0.627451, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 51 )
+custom_styles/pressed = SubResource( 52 )
+custom_styles/disabled = SubResource( 53 )
+custom_styles/normal = SubResource( 54 )
+icon = ExtResource( 65 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SuppliesButton" type="Button" parent="InventoryRect/ShopRect/ShopButtonsRect"]
+margin_left = -5.0
+margin_top = 237.0
+margin_right = 45.0
+margin_bottom = 287.0
+custom_colors/font_color_disabled = Color( 0.627451, 0.627451, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 66 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyBackButton" type="Button" parent="InventoryRect/ShopRect/ShopButtonsRect"]
+margin_left = -5.0
+margin_top = 287.0
+margin_right = 45.0
+margin_bottom = 337.0
+custom_colors/font_color_disabled = Color( 0.627451, 0.627451, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 68 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyRect" type="NinePatchRect" parent="InventoryRect/ShopRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -50.0
+margin_right = -10.0
+margin_bottom = -10.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoldLabel" type="Label" parent="InventoryRect/ShopRect/MoneyRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 2.0
+margin_top = -15.5
+margin_right = 42.0
+margin_bottom = 1.5
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Gold :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoldnLabel" type="Label" parent="InventoryRect/ShopRect/MoneyRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 50.0
+margin_top = -14.0
+margin_right = 126.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoolLabel" type="Label" parent="InventoryRect/ShopRect/MoneyRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 3.0
+margin_top = 0.5
+margin_right = 43.0
+margin_bottom = 17.5
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Pool :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoolnLabel" type="Label" parent="InventoryRect/ShopRect/MoneyRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 49.0
+margin_top = 2.0
+margin_right = 128.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoolButton" type="Button" parent="InventoryRect/ShopRect/MoneyRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -117.0
+margin_top = -19.5
+margin_right = -56.9999
+margin_bottom = 20.5
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+text = "Pool"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeaveShopButton" type="Button" parent="InventoryRect/ShopRect/MoneyRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -19.0
+margin_bottom = 21.0
+custom_colors/font_color_disabled = Color( 0.627451, 0.627451, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+text = "Leave"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonJoin" type="TextureButton" parent="InventoryRect"]
+visible = false
+margin_left = 332.0
+margin_top = 300.0
+margin_right = 382.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.8, 0.8 )
+shortcut = SubResource( 56 )
+texture_normal = ExtResource( 31 )
+texture_click_mask = ExtResource( 33 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSplit" type="TextureButton" parent="InventoryRect"]
+visible = false
+margin_left = 332.0
+margin_top = 280.0
+margin_right = 382.0
+margin_bottom = 305.0
+rect_scale = Vector2( 0.8, 0.8 )
+shortcut = SubResource( 58 )
+texture_normal = ExtResource( 32 )
+texture_click_mask = ExtResource( 33 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonEquip" type="Button" parent="InventoryRect"]
+margin_left = 6.46179
+margin_top = -56.8638
+margin_right = 59.4618
+margin_bottom = -36.8638
+shortcut = SubResource( 60 )
+text = "EQUIP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharSwapRect" type="NinePatchRect" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharPickRect" parent="CharSwapRect" instance=ExtResource( 29 )]
+margin_left = 37.3118
+margin_top = 38.3151
+margin_right = 634.312
+margin_bottom = 513.315
+
+[node name="OKButton" type="Button" parent="CharSwapRect"]
+margin_left = 447.201
+margin_top = 522.568
+margin_right = 514.201
+margin_bottom = 552.568
+custom_colors/font_color_disabled = Color( 0.305882, 0.588235, 0.305882, 1 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 0.4, 1, 0.4, 1 )
+custom_colors/font_color_pressed = Color( 0, 0.796078, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="Button" parent="CharSwapRect"]
+margin_left = 351.0
+margin_top = 524.0
+margin_right = 418.0
+margin_bottom = 554.0
+custom_colors/font_color_disabled = Color( 0.588235, 0.305882, 0.305882, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0.4, 0.4, 1 )
+custom_colors/font_color_pressed = Color( 0.796078, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/focus = ExtResource( 11 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TreasureControl" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+itemLootButton = ExtResource( 35 )
+
+[node name="itemsRect" type="ColorRect" parent="TreasureControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TreasureControl/itemsRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemContainer" type="GridContainer" parent="TreasureControl/itemsRect/ScrollContainer"]
+custom_constants/vseparation = -1
+custom_constants/hseparation = -1
+columns = 14
+
+[node name="BotRightLootInfo" type="NinePatchRect" parent="TreasureControl"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = -200.0
+mouse_filter = 0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemInfoRect" type="NinePatchRect" parent="TreasureControl/BotRightLootInfo"]
+margin_right = 320.0
+margin_bottom = 151.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemTextureRect" type="TextureRect" parent="TreasureControl/BotRightLootInfo/ItemInfoRect"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 42.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemNameLabel" type="Label" parent="TreasureControl/BotRightLootInfo/ItemInfoRect"]
+margin_left = 48.0
+margin_top = 17.0
+margin_right = 305.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemStatsLabel" type="Label" parent="TreasureControl/BotRightLootInfo/ItemInfoRect"]
+margin_left = 48.7351
+margin_top = 41.2581
+margin_right = 305.735
+margin_bottom = 58.2581
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemWeightLabel" type="Label" parent="TreasureControl/BotRightLootInfo/ItemInfoRect"]
+margin_left = 46.5298
+margin_top = 65.5161
+margin_right = 303.53
+margin_bottom = 82.5161
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyLabel" type="Label" parent="TreasureControl/BotRightLootInfo/ItemInfoRect"]
+margin_left = 181.0
+margin_top = 152.0
+margin_right = 215.0
+margin_bottom = 200.0
+rect_scale = Vector2( 0.9, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_constants/line_spacing = -2
+text = "Gold:
+Gms:
+Jwls :"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneynLabel" type="Label" parent="TreasureControl/BotRightLootInfo/ItemInfoRect"]
+margin_left = 214.315
+margin_top = 152.202
+margin_right = 254.315
+margin_bottom = 200.202
+rect_scale = Vector2( 0.9, 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_constants/line_spacing = -2
+text = "0
+0
+0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyButton" type="Button" parent="TreasureControl/BotRightLootInfo"]
+margin_left = 50.0
+margin_top = 151.0
+margin_right = 100.0
+margin_bottom = 201.0
+rect_min_size = Vector2( 50, 50 )
+rect_scale = Vector2( 1, 0.8 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+icon = ExtResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoolButton" type="Button" parent="TreasureControl/BotRightLootInfo"]
+margin_left = 99.0
+margin_top = 151.0
+margin_right = 139.0
+margin_bottom = 191.0
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+text = "Pool"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShareButton" type="Button" parent="TreasureControl/BotRightLootInfo"]
+margin_left = 139.0
+margin_top = 151.0
+margin_right = 179.0
+margin_bottom = 191.0
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+text = "Share"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDone" type="Button" parent="TreasureControl/BotRightLootInfo"]
+margin_left = 10.0
+margin_top = 151.0
+margin_right = 50.0
+margin_bottom = 191.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 46 )
+icon = ExtResource( 17 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyRect" type="NinePatchRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -320.0
+texture = ExtResource( 44 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 57 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyChangingLabel" type="Label" parent="MoneyRect"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 214.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Money Changing is not availlable."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MoneyRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -465.0
+margin_top = 4.0
+margin_right = -10.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MoneyRect/ScrollContainer"]
+
+[node name="PoolButton" type="Button" parent="MoneyRect"]
+margin_left = 71.7261
+margin_top = 57.181
+margin_right = 131.726
+margin_bottom = 94.181
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+text = "Pool"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShareButton" type="Button" parent="MoneyRect"]
+margin_left = 131.726
+margin_top = 57.181
+margin_right = 191.726
+margin_bottom = 94.181
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+text = "Share"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoneButton" type="Button" parent="MoneyRect"]
+margin_left = 72.3176
+margin_top = 94.8622
+margin_right = 192.318
+margin_bottom = 131.862
+custom_colors/font_color_disabled = Color( 0.643137, 0.501961, 0.501961, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 49 )
+custom_styles/pressed = ExtResource( 52 )
+custom_styles/disabled = ExtResource( 51 )
+custom_styles/normal = ExtResource( 50 )
+text = "Done"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyGridContainer" type="GridContainer" parent="MoneyRect"]
+margin_left = 59.0
+margin_top = 143.0
+margin_right = 203.0
+margin_bottom = 208.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyButton1" type="Button" parent="MoneyRect/QtyGridContainer"]
+margin_right = 48.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 48, 32 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+toggle_mode = true
+pressed = true
+text = "x1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyButton10" type="Button" parent="MoneyRect/QtyGridContainer"]
+margin_left = 48.0
+margin_right = 96.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 48, 32 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+toggle_mode = true
+text = "x10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyButton100" type="Button" parent="MoneyRect/QtyGridContainer"]
+margin_left = 96.0
+margin_right = 144.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 48, 32 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+toggle_mode = true
+text = "x100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyButton1k" type="Button" parent="MoneyRect/QtyGridContainer"]
+margin_top = 32.0
+margin_right = 48.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 48, 32 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+toggle_mode = true
+text = "x1000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyButton10k" type="Button" parent="MoneyRect/QtyGridContainer"]
+margin_left = 48.0
+margin_top = 32.0
+margin_right = 96.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 48, 32 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+toggle_mode = true
+text = "x10k"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QtyButton100k" type="Button" parent="MoneyRect/QtyGridContainer"]
+margin_left = 96.0
+margin_top = 32.0
+margin_right = 144.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 48, 32 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.643137, 0.643137, 1 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/disabled = ExtResource( 10 )
+custom_styles/normal = ExtResource( 8 )
+toggle_mode = true
+text = "x100k"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinsTextureRect" type="TextureRect" parent="MoneyRect"]
+margin_left = 64.0
+margin_top = 236.912
+margin_right = 96.0
+margin_bottom = 268.912
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 61 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeft" type="Button" parent="MoneyRect/CoinsTextureRect"]
+margin_left = 32.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_styles/pressed = SubResource( 61 )
+custom_styles/normal = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="Button" parent="MoneyRect/CoinsTextureRect"]
+margin_left = 112.0
+margin_right = 128.0
+margin_bottom = 32.0
+custom_styles/pressed = SubResource( 63 )
+custom_styles/normal = SubResource( 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDown" type="Button" parent="MoneyRect/CoinsTextureRect"]
+margin_top = 32.0
+margin_right = 32.0
+margin_bottom = 48.0
+custom_styles/pressed = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelPatchRect" type="NinePatchRect" parent="MoneyRect/CoinsTextureRect"]
+margin_left = 48.0
+margin_right = 112.0
+margin_bottom = 32.0
+texture = ExtResource( 58 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinsLabel" type="Label" parent="MoneyRect/CoinsTextureRect/LabelPatchRect"]
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 56.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GemsTextureRect" type="TextureRect" parent="MoneyRect"]
+margin_left = 64.0
+margin_top = 316.0
+margin_right = 96.0
+margin_bottom = 348.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeft" type="Button" parent="MoneyRect/GemsTextureRect"]
+margin_left = 32.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_styles/pressed = SubResource( 61 )
+custom_styles/normal = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="Button" parent="MoneyRect/GemsTextureRect"]
+margin_left = 112.0
+margin_right = 128.0
+margin_bottom = 32.0
+custom_styles/pressed = SubResource( 63 )
+custom_styles/normal = SubResource( 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonUp" type="Button" parent="MoneyRect/GemsTextureRect"]
+margin_top = -16.0
+margin_right = 32.0
+custom_styles/pressed = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDown" type="Button" parent="MoneyRect/GemsTextureRect"]
+margin_top = 32.0
+margin_right = 32.0
+margin_bottom = 48.0
+custom_styles/pressed = SubResource( 65 )
+custom_styles/normal = SubResource( 66 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelPatchRect" type="NinePatchRect" parent="MoneyRect/GemsTextureRect"]
+margin_left = 48.0
+margin_right = 112.0
+margin_bottom = 32.0
+texture = ExtResource( 58 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="GemsLabel" type="Label" parent="MoneyRect/GemsTextureRect/LabelPatchRect"]
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 56.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JewelsTextureRect" type="TextureRect" parent="MoneyRect"]
+margin_left = 64.0
+margin_top = 396.0
+margin_right = 96.0
+margin_bottom = 428.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeft" type="Button" parent="MoneyRect/JewelsTextureRect"]
+margin_left = 32.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_styles/pressed = SubResource( 61 )
+custom_styles/normal = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="Button" parent="MoneyRect/JewelsTextureRect"]
+margin_left = 112.0
+margin_right = 128.0
+margin_bottom = 32.0
+custom_styles/pressed = SubResource( 63 )
+custom_styles/normal = SubResource( 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonUp" type="Button" parent="MoneyRect/JewelsTextureRect"]
+margin_top = -16.0
+margin_right = 32.0
+custom_styles/pressed = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelPatchRect" type="NinePatchRect" parent="MoneyRect/JewelsTextureRect"]
+margin_left = 48.0
+margin_right = 112.0
+margin_bottom = 32.0
+texture = ExtResource( 58 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="JewelsLabel" type="Label" parent="MoneyRect/JewelsTextureRect/LabelPatchRect"]
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 56.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsRect" type="NinePatchRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSettingsRect" type="NinePatchRect" parent="SettingsRect"]
+anchor_bottom = 1.0
+margin_right = 19.0
+rect_min_size = Vector2( 320, 600 )
+mouse_filter = 0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSettingsLabel" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -51.0
+margin_top = 16.0
+margin_right = 51.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Music Settings :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type0Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -236.0
+margin_right = 118.0
+margin_bottom = -204.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Battle :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type0Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type0Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type0Label/Type0Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type0Label/Type0Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type0Label/Type0Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type1Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -204.0
+margin_right = 118.0
+margin_bottom = -172.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Camp :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type1Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type1Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type1Label/Type1Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type1Label/Type1Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type1Label/Type1Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type2Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -172.0
+margin_right = 118.0
+margin_bottom = -140.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Cave :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type2Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type2Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type2Label/Type2Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type2Label/Type2Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type2Label/Type2Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type3Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -140.0
+margin_right = 118.0
+margin_bottom = -108.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Create :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type3Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type3Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type3Label/Type3Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type3Label/Type3Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type3Label/Type3Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type4Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -108.0
+margin_right = 118.0
+margin_bottom = -76.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Dungeon :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type4Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type4Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type4Label/Type4Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type4Label/Type4Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type4Label/Type4Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type5Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -76.0
+margin_right = 118.0
+margin_bottom = -44.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Indoor :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type5Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type5Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type5Label/Type5Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type5Label/Type5Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type5Label/Type5Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type6Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -44.0
+margin_right = 118.0
+margin_bottom = -12.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Items :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type6Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type6Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type6Label/Type6Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type6Label/Type6Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type6Label/Type6Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type7Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -12.0
+margin_right = 118.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Outdoor :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type7Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type7Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type7Label/Type7Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type7Label/Type7Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type7Label/Type7Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type8Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 20.0
+margin_right = 118.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Shop :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type8Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type8Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type8Label/Type8Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type8Label/Type8Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type8Label/Type8Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type9Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 52.0
+margin_right = 118.0
+margin_bottom = 84.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Temple :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type9Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type9Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type9Label/Type9Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type9Label/Type9Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type9Label/Type9Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="Type10Label" type="Label" parent="SettingsRect/MusicSettingsRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 84.0
+margin_right = 118.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Treasure :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Type10Button" type="Button" parent="SettingsRect/MusicSettingsRect/Type10Label"]
+margin_left = 68.238
+margin_top = -2.0
+margin_right = 264.238
+margin_bottom = 18.0
+custom_styles/disabled = ExtResource( 10 )
+text = "Track Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="SettingsRect/MusicSettingsRect/Type10Label/Type10Button"]
+margin_top = 20.0
+margin_right = 196.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 196, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingsRect/MusicSettingsRect/Type10Label/Type10Button/PopupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsRect/MusicSettingsRect/Type10Label/Type10Button/PopupPanel/ScrollContainer"]
+custom_constants/separation = -1
+
+[node name="ButtonDone" type="Button" parent="SettingsRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -50.0
+margin_top = -50.0
+margin_right = -10.0
+margin_bottom = -10.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/disabled = SubResource( 33 )
+custom_styles/normal = SubResource( 34 )
+shortcut = SubResource( 46 )
+icon = ExtResource( 17 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Canvaslayer" type="CanvasLayer" parent="."]
+__meta__ = {
+"_editor_description_": "for some reason hiding its children doesznt  hide them during runtime !"
+}
+
+[connection signal="pressed" from="BotRightPanel/InventoryButton" to="." method="_on_InventoryButton_pressed"]
+[connection signal="pressed" from="BotRightPanel/CharSwapButton" to="." method="_on_CharSwapButton_pressed"]
+[connection signal="pressed" from="BotRightPanel/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="BotRightPanel/EncounterButton" to="." method="_on_EncounterButton_pressed"]
+[connection signal="pressed" from="BotRightPanel/CampButton" to="." method="_on_CampButton_pressed"]
+[connection signal="pressed" from="BotRightPanel/MoneyButton" to="." method="_on_MoneyButton_pressed"]
+[connection signal="button_down" from="BotRightPanel/RestButton" to="." method="_on_RestButton_button_down"]
+[connection signal="button_up" from="BotRightPanel/RestButton" to="." method="_on_RestButton_button_up"]
+[connection signal="toggled" from="BotRightPanel/RestButton" to="." method="_on_RestButton_toggled"]
+[connection signal="timeout" from="BotRightPanel/RestButton/RestTimer" to="." method="_on_RestTimer_timeout"]
+[connection signal="pressed" from="BotRightPanel/SpellButton" to="." method="_on_SpellButton_pressed"]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton1" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton2" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton3" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton4" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton5" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton6" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 5 ]]
+[connection signal="pressed" from="SpellsRect/TopContainer/SpellLevelsRect/SpellLevelsContainer/SLevelButton7" to="SpellsRect" method="_on_SLevelButton_pressed" binds= [ 6 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton1" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton2" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton3" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton4" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton5" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 5 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton6" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 6 ]]
+[connection signal="pressed" from="SpellsRect/MiddleContainer/PowerLevelsRect/PowerLevelsContainer/PLevelButton7" to="SpellsRect" method="_on_PLevelButton_pressed" binds= [ 7 ]]
+[connection signal="pressed" from="SpellsRect/BottomContainer/CastButton" to="SpellsRect" method="_on_CastButton_pressed"]
+[connection signal="pressed" from="SpellsRect/BottomContainer/LeftButton" to="SpellsRect" method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="SpellsRect/BottomContainer/RightButton" to="SpellsRect" method="_on_RightButton_pressed"]
+[connection signal="pressed" from="SpellsRect/BottomContainer/AbortButton" to="SpellsRect" method="_on_AbortButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/InventoryButton" to="EncounterControl" method="_on_InventoryButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/InventoryButton/UseItemRect/LeftButton" to="EncounterControl/HBoxContainer/InventoryButton/UseItemRect" method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/InventoryButton/UseItemRect/RightButton" to="EncounterControl/HBoxContainer/InventoryButton/UseItemRect" method="_on_RightButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/InventoryButton/UseItemRect/CancelButton" to="EncounterControl/HBoxContainer/InventoryButton/UseItemRect" method="_on_CancelButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/ActionButton" to="EncounterControl" method="_on_ActionButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/SpeakButton" to="EncounterControl" method="_on_SpeakButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/SpeakButton/NinePatchRect/SpeakDoneButton" to="EncounterControl" method="_on_SpeakDoneButton_pressed"]
+[connection signal="pressed" from="EncounterControl/HBoxContainer/StopButton" to="EncounterControl" method="_on_StopButton_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonTrade" to="InventoryRect" method="_on_ButtonTrade_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonShop" to="InventoryRect" method="_on_ButtonShop_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonUse" to="InventoryRect" method="_on_ButtonUse_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonIdentify" to="InventoryRect" method="_on_ButtonIdentify_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonidentiPay" to="InventoryRect" method="_on_ButtonidentiPay_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonDrop" to="InventoryRect" method="_on_ButtonDrop_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonDone" to="InventoryRect" method="_on_ButtonDone_pressed"]
+[connection signal="pressed" from="InventoryRect/TradeRect/ButtonShow" to="InventoryRect" method="_on_ButtonShow_pressed"]
+[connection signal="pressed" from="InventoryRect/TradeRect/ButtonTradeItem" to="InventoryRect" method="_on_ButtonTradeItem_pressed"]
+[connection signal="pressed" from="InventoryRect/ShopRect/ShopButtonsRect/WeaponsButton" to="InventoryRect/ShopRect" method="_on_ShopButton_pressed" binds= [ "Weapons" ]]
+[connection signal="pressed" from="InventoryRect/ShopRect/ShopButtonsRect/BArmorButton" to="InventoryRect/ShopRect" method="_on_ShopButton_pressed" binds= [ "Armor" ]]
+[connection signal="pressed" from="InventoryRect/ShopRect/ShopButtonsRect/LArmorButton" to="InventoryRect/ShopRect" method="_on_ShopButton_pressed" binds= [ "Limbs" ]]
+[connection signal="pressed" from="InventoryRect/ShopRect/ShopButtonsRect/SuppliesButton" to="InventoryRect/ShopRect" method="_on_ShopButton_pressed" binds= [ "Supplies" ]]
+[connection signal="pressed" from="InventoryRect/ShopRect/ShopButtonsRect/BuyBackButton" to="InventoryRect/ShopRect" method="_on_ShopButton_pressed" binds= [ "BuyBack" ]]
+[connection signal="pressed" from="InventoryRect/ShopRect/MoneyRect/PoolButton" to="InventoryRect/ShopRect" method="_on_PoolButton_pressed"]
+[connection signal="pressed" from="InventoryRect/ShopRect/MoneyRect/LeaveShopButton" to="InventoryRect/ShopRect" method="_on_LeaveShopButton_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonJoin" to="InventoryRect" method="_on_ButtonJoin_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonSplit" to="InventoryRect" method="_on_ButtonSplit_pressed"]
+[connection signal="pressed" from="InventoryRect/ButtonEquip" to="InventoryRect" method="_on_ButtonEquip_pressed"]
+[connection signal="pressed" from="CharSwapRect/OKButton" to="CharSwapRect" method="_on_OKButton_pressed"]
+[connection signal="pressed" from="CharSwapRect/CancelButton" to="CharSwapRect" method="_on_CancelButton_pressed"]
+[connection signal="pressed" from="TreasureControl/BotRightLootInfo/MoneyButton" to="." method="_on_MoneyButton_pressed"]
+[connection signal="pressed" from="TreasureControl/BotRightLootInfo/PoolButton" to="TreasureControl" method="_on_PoolButton_pressed"]
+[connection signal="pressed" from="TreasureControl/BotRightLootInfo/ShareButton" to="TreasureControl" method="_on_ShareButton_pressed"]
+[connection signal="pressed" from="TreasureControl/BotRightLootInfo/ButtonDone" to="TreasureControl" method="_on_ButtonDone_pressed"]
+[connection signal="pressed" from="MoneyRect/PoolButton" to="MoneyRect" method="_on_PoolButton_pressed"]
+[connection signal="pressed" from="MoneyRect/ShareButton" to="MoneyRect" method="_on_ShareButton_pressed"]
+[connection signal="pressed" from="MoneyRect/DoneButton" to="MoneyRect" method="_on_DoneButton_pressed"]
+[connection signal="toggled" from="MoneyRect/QtyGridContainer/QtyButton1" to="MoneyRect" method="_on_QtyButton_toggled" binds= [ 1 ]]
+[connection signal="toggled" from="MoneyRect/QtyGridContainer/QtyButton10" to="MoneyRect" method="_on_QtyButton_toggled" binds= [ 10 ]]
+[connection signal="toggled" from="MoneyRect/QtyGridContainer/QtyButton100" to="MoneyRect" method="_on_QtyButton_toggled" binds= [ 100 ]]
+[connection signal="toggled" from="MoneyRect/QtyGridContainer/QtyButton1k" to="MoneyRect" method="_on_QtyButton_toggled" binds= [ 1000 ]]
+[connection signal="toggled" from="MoneyRect/QtyGridContainer/QtyButton10k" to="MoneyRect" method="_on_QtyButton_toggled" binds= [ 10000 ]]
+[connection signal="toggled" from="MoneyRect/QtyGridContainer/QtyButton100k" to="MoneyRect" method="_on_QtyButton_toggled" binds= [ 100000 ]]
+[connection signal="pressed" from="MoneyRect/CoinsTextureRect/ButtonLeft" to="MoneyRect" method="_on_poolArrow_pressed" binds= [ -1, 0 ]]
+[connection signal="pressed" from="MoneyRect/CoinsTextureRect/ButtonRight" to="MoneyRect" method="_on_poolArrow_pressed" binds= [ 1, 0 ]]
+[connection signal="pressed" from="MoneyRect/CoinsTextureRect/ButtonDown" to="MoneyRect" method="_on_changeArrow_pressed" binds= [ 0, 1 ]]
+[connection signal="pressed" from="MoneyRect/GemsTextureRect/ButtonLeft" to="MoneyRect" method="_on_poolArrow_pressed" binds= [ -1, 1 ]]
+[connection signal="pressed" from="MoneyRect/GemsTextureRect/ButtonRight" to="MoneyRect" method="_on_poolArrow_pressed" binds= [ 1, 1 ]]
+[connection signal="pressed" from="MoneyRect/GemsTextureRect/ButtonUp" to="MoneyRect" method="_on_changeArrow_pressed" binds= [ 1, 0 ]]
+[connection signal="pressed" from="MoneyRect/GemsTextureRect/ButtonDown" to="MoneyRect" method="_on_changeArrow_pressed" binds= [ 1, 2 ]]
+[connection signal="pressed" from="MoneyRect/JewelsTextureRect/ButtonLeft" to="MoneyRect" method="_on_poolArrow_pressed" binds= [ -1, 2 ]]
+[connection signal="pressed" from="MoneyRect/JewelsTextureRect/ButtonRight" to="MoneyRect" method="_on_poolArrow_pressed" binds= [ 1, 2 ]]
+[connection signal="pressed" from="MoneyRect/JewelsTextureRect/ButtonUp" to="MoneyRect" method="_on_changeArrow_pressed" binds= [ 2, 1 ]]
+[connection signal="pressed" from="SettingsRect/ButtonDone" to="SettingsRect" method="_on_ButtonDone_pressed"]

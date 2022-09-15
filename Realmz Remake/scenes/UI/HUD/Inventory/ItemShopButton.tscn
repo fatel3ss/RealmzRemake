@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/UI/HUD/Inventory/ItemShopButton.gd" type="Script" id=2]
+[ext_resource path="res://shared_assets/Map Symbols/tileDark.png" type="Texture" id=3]
+[ext_resource path="res://scenes/UI/HUD/Characters Panel/CharPanelSelectOn.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="ItemShopButton" type="Button"]
+margin_left = 1.0
+margin_right = 321.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 160, 60 )
+mouse_filter = 1
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconSprite" type="Sprite" parent="."]
+position = Vector2( 38, 14 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="SpriteSelected" type="Sprite" parent="."]
+visible = false
+position = Vector2( -9, 0 )
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ItemnameLabel" type="Label" parent="."]
+margin_left = 74.0
+margin_top = 4.0
+margin_right = 212.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Item Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PriceLabel" type="Label" parent="."]
+margin_left = 74.0
+margin_top = 38.0
+margin_right = 212.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Price :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PricenLabel" type="Label" parent="."]
+margin_left = 122.37
+margin_top = 39.0
+margin_right = 202.37
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "999999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeightnLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -65.0
+margin_top = -21.0
+margin_right = -15.0
+margin_bottom = -4.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "999999"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeightLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -124.0
+margin_top = -22.0
+margin_right = -65.0
+margin_bottom = -5.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Weight :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IteminfoLabel" type="Label" parent="."]
+margin_left = 74.0
+margin_top = 20.0
+margin_right = 212.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Item Info"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemstatsLabel" type="Label" parent="."]
+margin_left = 105.0
+margin_top = 20.0
+margin_right = 305.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Stats"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChargesLabel" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 4.0
+margin_right = 304.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 30, 8.5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "X 100 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuantityLabel" type="Label" parent="."]
+margin_top = 25.0
+margin_right = 33.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 30, 8.5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "99 X"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="." to="." method="_on_ItemSmallButton_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_ItemSmallButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ItemSmallButton_mouse_exited"]

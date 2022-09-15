@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="ChoicesButtonSeparator" type="HSeparator"]
+margin_right = 40.0
+margin_bottom = 4.0
+custom_styles/separator = SubResource( 1 )
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}

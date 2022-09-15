@@ -1,0 +1,156 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://shared_assets/UI/StonePatternRect9.png" type="Texture" id=1]
+[ext_resource path="res://shared_assets/UI/buttonUP.png" type="Texture" id=2]
+[ext_resource path="res://scenes/UI/Main Menu/DefaultPortrait.png" type="Texture" id=3]
+[ext_resource path="res://scenes/UI/Main Menu/CharacterStatsRect/CharacterStatsRect.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 50, 50 )
+margin_left = 5.0
+margin_right = 5.0
+margin_top = 5.0
+margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CharacterStatsRect" type="NinePatchRect"]
+margin_right = 512.0
+margin_bottom = 522.0
+rect_min_size = Vector2( 512, 192 )
+texture = ExtResource( 1 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitRect" type="TextureRect" parent="."]
+margin_left = 19.0452
+margin_top = 19.0453
+margin_right = 63.0452
+margin_bottom = 63.0453
+texture = ExtResource( 3 )
+
+[node name="NameLabel" type="Label" parent="."]
+margin_left = 69.3791
+margin_top = 25.8471
+margin_right = 109.379
+margin_bottom = 56.8471
+text = "Name
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RaceClassLabel" type="Label" parent="."]
+margin_left = 68.0188
+margin_top = 46.2527
+margin_right = 135.019
+margin_bottom = 60.2527
+text = "Race Class"
+
+[node name="LevelLabel" type="Label" parent="."]
+margin_left = 336.013
+margin_top = 24.4868
+margin_right = 382.013
+margin_bottom = 38.4868
+text = "Level 1"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpLabel" type="Label" parent="."]
+margin_left = 273.435
+margin_top = 46.2527
+margin_right = 384.435
+margin_bottom = 60.2527
+text = "0 Exp to Level Up"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsLabel" type="Label" parent="."]
+visible = false
+margin_left = 9.04251
+margin_top = 100.964
+margin_right = 93.0425
+margin_bottom = 386.964
+text = "HP :
+SP :
+
+Strength :
+Intellect :
+Wisdom :
+Dexterity :
+Vitality :
+
+HP Regen :
+SP Regen :
+
+Accuracy :
+Evasion :
+
+Resistances :
+Multipliers :"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsTable" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 96.0
+margin_right = -8.0
+margin_bottom = -128.0
+custom_styles/normal = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModsLabel" type="Label" parent="."]
+margin_left = 17.7458
+margin_top = 401.872
+margin_right = 226.746
+margin_bottom = 432.872
+text = "Stat Modifications by the Player :
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModsTable" type="RichTextLabel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -97.0
+margin_right = -8.0
+margin_bottom = -9.0
+rect_min_size = Vector2( 0, 88 )
+custom_styles/normal = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BaseGrowthLabel" type="Label" parent="."]
+margin_left = 143.98
+margin_top = 77.1022
+margin_right = 344.98
+margin_bottom = 91.1022
+text = "Base :            Level Up Growth :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
