@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=1]
+[ext_resource path="res://shared_assets/UI/buttonPRESSED.png" type="Texture" id=2]
+[ext_resource path="res://shared_assets/UI/buttonUP.png" type="Texture" id=3]
+[ext_resource path="res://scenes/UI/Party Selection/DefaultPortrait.png" type="Texture" id=4]
+[ext_resource path="res://shared_assets/UI/buttonHOVER.png" type="Texture" id=5]
+[ext_resource path="res://scenes/UI/Party Selection/CharPickButton.gd" type="Script" id=6]
+[ext_resource path="res://shared_assets/UI/buttonDISABLED.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 50, 50 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 50, 50 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 50, 50 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 50, 50 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CharPickButton" type="Button"]
+margin_right = 200.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 200, 40 )
+mouse_filter = 1
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelnLabel" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 16.0
+margin_right = 153.0
+margin_bottom = 33.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "48"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitSprite" type="Sprite" parent="."]
+position = Vector2( 22, 4 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 6, 6, 32, 32 )
+
+[node name="NameLabel" type="Label" parent="."]
+margin_left = 58.0
+margin_top = 5.0
+margin_right = 194.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Michel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RaceClassLabel" type="Label" parent="."]
+margin_left = 59.0
+margin_top = 22.0
+margin_right = 195.0
+margin_bottom = 36.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Lizardfolk Battlemage"
+__meta__ = {
+"_edit_use_anchors_": false
+}

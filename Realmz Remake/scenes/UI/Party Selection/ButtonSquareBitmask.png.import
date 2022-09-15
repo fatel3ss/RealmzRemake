@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/ButtonSquareBitmask.png-84a477bd63c09520846db838a671a439.res"
+
+[deps]
+
+source_file="res://scenes/UI/Party Selection/ButtonSquareBitmask.png"
+dest_files=[ "res://.import/ButtonSquareBitmask.png-84a477bd63c09520846db838a671a439.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

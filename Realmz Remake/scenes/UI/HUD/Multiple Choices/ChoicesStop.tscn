@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://shared_assets/UI/stone_pattern.png" type="Texture" id=1]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/STOP.png" type="Texture" id=2]
+[ext_resource path="res://scenes/UI/HUD/Multiple Choices/ChoicesStop.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="ChoicesStop" type="Control"]
+margin_right = 200.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_vertical = 4
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -23.0
+margin_top = -10.0
+margin_right = 3.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_vertical = 4
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="CenterContainer" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 64, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TextureRect/Container"]
+margin_left = 88.0
+margin_top = 11.0
+margin_right = 138.0
+margin_bottom = 61.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon = ExtResource( 2 )
+[connection signal="pressed" from="TextureRect/Container/Button" to="." method="_on_Button_pressed"]

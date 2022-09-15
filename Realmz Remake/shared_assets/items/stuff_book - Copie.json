@@ -1,0 +1,149 @@
+{
+   "Leather Cap" : 
+   {
+      "name" :  "Leather Cap",
+      "img_ptr" : "ITEM_leather_cap",
+      "weight" : 15,
+      "type" : "Soft Helmet",
+      "slots" : ["Head"],
+      "equippable" : 1,
+      "stats_mini" : "Armor : 3",
+      "stats" : {"EvasionRanged" : 3, "EvasionMelee" : 3},
+      "sound" : "cloth armor.ogg",
+      "_on_equipping_source" :
+"
+	print(character.name+' equipped '+item['name']+' ! This is Script !')
+	print('Does the second liek work ?')
+"
+   },
+   "Iron Cap" : 
+   {
+      "name" :  "Iron Cap",
+      "img_ptr" : "ITEM_iron_cap",
+      "weight" : 25,
+      "type" : "Light Helmet",
+      "slots" : ["Head"],
+      "equippable" : 1,
+      "stats_mini" : "Armor : 5",
+      "stats" : {"EvasionRanged" : 5, "EvasionMelee" : 5},
+      "sound" : "metal armor.ogg"
+   },
+   "Helm of Pain" : 
+   {
+      "name" :  "Helm of Pain",
+      "img_ptr" : "ITEM_helm_pain",
+      "weight" : 25,
+      "type" : "Great Helm",
+      "slots" : ["Head"],
+      "equippable" : 1,
+      "stats_mini" : "Armor : 10",
+      "stats" : {"EvasionRanged" : 10, "EvasionMelee" : 10},
+      "sound" : "metal armor.ogg"
+   },
+   "Health Potion" : 
+   {
+      "name" :  "Health Potion",
+      "img_ptr" : "ITEM_health_potion",
+      "weight" : 0,
+      "type" : "Potion",
+      "sound" : "slurpy.ogg",
+      "charges_max" : 6,
+      "charges" : 5 ,
+      "charges_weight" : 1,
+      "splittable" :1,
+      "delete_on_empty" : 1,
+      "stats_mini" : "Heals 10 HP",
+      "_on_field_use_source" :
+"
+	print(character.name+' used '+item['name']+' ! This is POTION Script !')
+	if item['charges']>0 :
+		item['charges'] -=1
+		SfxPlayer.stream = NodeAccess.__Resources().sounds_book[item['sound']]
+		SfxPlayer.play()
+		character.stats['curHP'] +=10
+		# character.stats['curHP'] = max(character.stats['curHP'], character.stats['maxHP'] )
+		GameGlobal.refresh_OW_HUD()
+		print('Did it taste good ?')
+	else :
+		print(item['name']+' is empty !')
+"
+   },
+   "Dagger" :
+   {
+	"name" : "Dagger",
+        "weight" : 10,
+	"type" : "Dagger",
+	"img_ptr" : "ITEM_dagger",
+	"sound" : "metal hit.ogg",
+	"slots" : ["Melee Weapon"],
+	"hands" : 1,
+	"equippable" : 1 ,
+        "stats_mini" : "Damage : 1-6",
+        "stats" : { "EvasionMelee" : 3 },
+	"_on_drop_source" :
+"
+	SfxPlayer.stream = NodeAccess.__Resources().sounds_book['generation error.ogg']
+	SfxPlayer.play()
+	print('CAN T DROP DAGGER LOL')
+	item['name'] = 'Cursed Undroppable Dagger'
+	return false
+"
+   },
+   "Buckler" :
+   {
+	"name" : "Buckler",
+        "weight" : 25,
+	"type" : "Small Shield",
+	"img_ptr" : "ITEM_buckler",
+	"slots" : ["Shield"],
+	"sound" : "metal hit.ogg",
+	"hands" : 1,
+	"equippable" : 1,
+        "stats_mini" : "Evasion : 6",
+	"stats" : {"EvasionRanged" : 6, "EvasionMelee" : 6},
+   },
+   "Lantern" :
+   {
+	"name" : "Lantern",
+        "weight" : 20,
+	"type" : "Consumable",
+	"img_ptr" : "ITEM_lantern",
+	"sound" : "slurpy.ogg",
+	"charges_max" : 50,
+	"charges" : 50,
+	"stats_mini" : "Light +3600 s",
+	"_on_field_use_source" :
+"
+	if item['charges']>0 :
+		item['charges'] -=1
+		GameGlobal.add_light_effect(3, 3600)
+		print('used Lantern, light_time is now : '+String(GameGlobal.light_time) )
+		GameGlobal.refresh_OW_HUD()
+	else :
+		print('Lantern empty, light_time is still : '+String(GameGlobal.light_time) )
+	
+"
+   },
+   "Shield of the Blue Oxen" :
+   {
+	"name" : "Shield of the Blue Oxen",
+        "weight" : 40,
+	"type" : "Small Shield",
+	"img_ptr" : "ITEM_shield_blue_oxen",
+	"slots" : ["Shield"],
+	"sound" : "metal hit.ogg",
+	"hands" : 1,
+	"equippable" : 1,
+        "stats_mini" : "Evasion : 15",
+	"stats" : {"EvasionRanged" : 15, "EvasionMelee" : 15},
+	"traits" : ["trait_1"],
+	"trait_1_source" :
+"
+var name = 'Blue Ox Regeneration'
+func _on_time_pass(character, s : int) :
+	print('shield blue oxen time pass script ! ')
+	character.stats['curHP'] += s
+	character.name = 'debug'
+"
+   }
+}

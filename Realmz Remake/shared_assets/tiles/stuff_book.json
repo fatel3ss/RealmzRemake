@@ -1,0 +1,132 @@
+{
+   "bags" : 
+   {
+      "img_ptr" : "CASTLE_FRN_bagsflat",
+      "type" : "furnitures"
+   },
+   "body" : 
+   {
+      "img_ptr" : "CASTLE_FLL_skeleton",
+      "type" : "ground_level"
+   },
+   "chest" : 
+   {
+      "img_ptr" : "CASTLE_FRN_chest_wood",
+      "type" : "furnitures"
+   },
+   "floor" : 
+   {
+      "img_ptr" : "CASTLE_FLR_stone",
+      "type" : "ground"
+   },
+   "floorcrack" : 
+   {
+      "img_ptr" : "CASTLE_FLR_stone_crack",
+      "type" : "ground"
+   },
+   "glyphbl" : 
+   {
+      "img_ptr" : "CASTLE_FLL_glyph2_bl",
+      "type" : "ground_level"
+   },
+   "glyphbr" : 
+   {
+      "img_ptr" : "CASTLE_FLL_glyph2_br",
+      "type" : "ground_level"
+   },
+   "glyphtl" : 
+   {
+      "img_ptr" : "CASTLE_FLL_glyph2_tl",
+      "type" : "ground_level"
+   },
+   "glyphtr" : 
+   {
+      "img_ptr" : "CASTLE_FLL_glyph2_tr",
+      "type" : "ground_level"
+   },
+   "puddle" : 
+   {
+      "img_ptr" : "CASTLE_FLR_stone_puddle",
+      "type" : "ground"
+   },
+   "stairsd" : 
+   {
+      "img_ptr" : "CASTLE_FLR_stairs_down",
+      "type" : "ground"
+   },
+   "stairsu" : 
+   {
+      "img_ptr" : "CASTLE_FRN_stairs_up",
+      "type" : "ground"
+   },
+   "tr" : 
+   {
+      "img_ptr" : "CASTLE_FLL_pool_ctr2",
+      "type" : "ground_level"
+   },
+   "wall_c2tl" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_c2tl",
+      "type" : "structures"
+   },
+   "wall_clbl" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_c1bl",
+      "type" : "structures"
+   },
+   "wall_clbr" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_c1br",
+      "type" : "structures"
+   },
+   "wall_cltl" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_c1tl",
+      "type" : "structures"
+   },
+   "wall_cltr" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_c1tr",
+      "type" : "structures"
+   },
+   "wall_in" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_in",
+      "type" : "structures"
+   },
+   "wall_sd" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_sd",
+      "type" : "structures"
+   },
+   "wall_sd_clth" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_sd_clothpurple",
+      "type" : "structures"
+   },
+   "wall_sl" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_sl",
+      "type" : "structures"
+   },
+   "wall_sr" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_sr",
+      "type" : "structures"
+   },
+   "wall_su" : 
+   {
+      "img_ptr" : "CASTLE_STR_wall_thick_su",
+      "type" : "structures"
+   },
+   "water" : 
+   {
+      "img_ptr" : "CASTLE_FLR_water",
+      "type" : "ground"
+   },
+   "rug" : 
+   {
+      "img_ptr" : "CASTLE_FLR_rug",
+      "type" : "ground"
+   }
+}

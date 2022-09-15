@@ -1,0 +1,12 @@
+{
+"Heal Minor Wounds" :
+"
+var name : String = 'Heal Minor Wounds'
+var attributes : Array = ['Healing']
+var school : String = 'Priest'
+var level : int = 1
+"
+
+		  
+
+}

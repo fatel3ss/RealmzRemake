@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/walk water.ogg-a537db4d3098f64f3439addf66ec439f.oggstr"
+
+[deps]
+
+source_file="res://shared_assets/sounds/walk water.ogg"
+dest_files=[ "res://.import/walk water.ogg-a537db4d3098f64f3439addf66ec439f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,423 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://scenes/UI/Main Menu/DefaultPortrait.png" type="Texture" id=1]
+[ext_resource path="res://shared_assets/UI/StonePatternRect9.png" type="Texture" id=2]
+[ext_resource path="res://scenes/UI/HUD/Characters Panel/CharPanelSelectOff.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Fonts/OldLondon44.tres" type="DynamicFont" id=5]
+[ext_resource path="res://scenes/UI/HUD/Characters Panel/CharacterSmallPanel.gd" type="Script" id=6]
+[ext_resource path="res://shared_assets/UI/button50_pressed_styleboxtexture.tres" type="StyleBox" id=7]
+[ext_resource path="res://shared_assets/UI/button50_normal_styleboxtexture.tres" type="StyleBox" id=8]
+[ext_resource path="res://shared_assets/UI/button50_hover_styleboxtexture.tres" type="StyleBox" id=9]
+[ext_resource path="res://shared_assets/UI/buttonPRESSED.png" type="Texture" id=10]
+[ext_resource path="res://shared_assets/UI/new_styleboxtexture_light.tres" type="StyleBox" id=11]
+[ext_resource path="res://scenes/UI/HUD/Characters Panel/DropItemButton.tscn" type="PackedScene" id=12]
+[ext_resource path="res://shared_assets/BattleEffects/BattleEffects.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[node name="CharacterSmallPanel" type="Panel"]
+margin_right = 200.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 200, 60 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dropItemEntryTSCN = ExtResource( 12 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 320.0
+margin_bottom = 60.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 84, 84 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitButton" type="Button" parent="."]
+margin_left = 13.4822
+margin_top = 8.04203
+margin_right = 57.4822
+margin_bottom = 52.042
+mouse_filter = 1
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumberLabel" type="Label" parent="PortraitButton"]
+margin_right = 44.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 5
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EffectSprite" type="Sprite" parent="PortraitButton"]
+visible = false
+position = Vector2( 6, 6 )
+texture = ExtResource( 13 )
+centered = false
+hframes = 8
+vframes = 16
+
+[node name="Timer" type="Timer" parent="PortraitButton/EffectSprite"]
+wait_time = 0.05
+
+[node name="CharnameLabel" type="Label" parent="."]
+margin_left = 61.2006
+margin_top = 8.40126
+margin_right = 199.201
+margin_bottom = 25.4013
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HPLabel" type="Label" parent="."]
+margin_left = 59.3076
+margin_top = 33.8806
+margin_right = 99.3076
+margin_bottom = 50.8806
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "HP :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurHPLabel" type="Label" parent="HPLabel"]
+margin_left = 31.8566
+margin_top = 1.0
+margin_right = 71.8566
+margin_bottom = 18.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "9999"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HPSlashLabel" type="Label" parent="HPLabel"]
+margin_left = 72.6118
+margin_top = -0.207626
+margin_right = 112.612
+margin_bottom = 16.7924
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.627451, 0.627451, 0.627451, 1 )
+custom_colors/font_color_shadow = Color( 0.25098, 0.25098, 0.25098, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 2
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 2
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxHPLabel" type="Label" parent="HPLabel"]
+margin_left = 80.8119
+margin_top = 0.540359
+margin_right = 120.812
+margin_bottom = 17.5404
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "9999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SPLabel" type="Label" parent="."]
+margin_left = 190.075
+margin_top = 33.8806
+margin_right = 230.075
+margin_bottom = 50.8806
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "SP :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurSPLabel" type="Label" parent="SPLabel"]
+margin_left = 31.8566
+margin_top = 1.0
+margin_right = 71.8566
+margin_bottom = 18.0
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "9999"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SPSlashLabel" type="Label" parent="SPLabel"]
+margin_left = 72.6118
+margin_top = -0.207626
+margin_right = 112.612
+margin_bottom = 16.7924
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.627451, 0.627451, 0.627451, 1 )
+custom_colors/font_color_shadow = Color( 0.25098, 0.25098, 0.25098, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 2
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 2
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxSPLabel" type="Label" parent="SPLabel"]
+margin_left = 80.8119
+margin_top = 0.540359
+margin_right = 120.812
+margin_bottom = 17.5404
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "9999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectButton" type="Button" parent="."]
+margin_left = -6.0
+margin_top = 5.0
+margin_right = 20.0
+margin_bottom = 55.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+icon = ExtResource( 3 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lootRect" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 58.0
+margin_top = 25.0
+margin_right = 314.0
+margin_bottom = 54.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lootRect2" type="NinePatchRect" parent="lootRect"]
+margin_left = 145.0
+margin_top = -19.0
+margin_right = 256.0
+margin_bottom = 1.0
+texture = ExtResource( 2 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsLabel" type="Label" parent="lootRect/lootRect2"]
+margin_left = 4.62991
+margin_top = 2.67865
+margin_right = 46.6299
+margin_bottom = 19.6786
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Items :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsNLabel" type="Label" parent="lootRect/lootRect2"]
+margin_left = 56.7816
+margin_top = 2.78665
+margin_right = 96.7816
+margin_bottom = 19.7867
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "10000"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropItemButton" type="Button" parent="lootRect"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 42.0
+margin_bottom = 26.0
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/normal = ExtResource( 8 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "Drop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropPopup" type="PopupPanel" parent="lootRect/DropItemButton"]
+margin_right = 150.0
+margin_bottom = 200.0
+custom_styles/panel = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropScroll" type="ScrollContainer" parent="lootRect/DropItemButton/DropPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropVBox" type="VBoxContainer" parent="lootRect/DropItemButton/DropPopup/DropScroll"]
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropRect" type="NinePatchRect" parent="lootRect/DropItemButton"]
+visible = false
+margin_right = 80.0
+margin_bottom = 200.0
+texture = ExtResource( 10 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLabel" type="Label" parent="lootRect"]
+margin_left = 47.9744
+margin_top = 6.19025
+margin_right = 87.9744
+margin_bottom = 23.1902
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Move:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveNLabel" type="Label" parent="lootRect"]
+margin_left = 95.7738
+margin_top = 7.0
+margin_right = 135.774
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "12"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadLabel" type="Label" parent="lootRect"]
+margin_left = 121.484
+margin_top = 5.96402
+margin_right = 163.484
+margin_bottom = 22.964
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "Load:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadCNLabel" type="Label" parent="lootRect"]
+margin_left = 155.355
+margin_top = 6.99998
+margin_right = 195.355
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "10000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadMNLabel" type="Label" parent="lootRect"]
+margin_left = 208.746
+margin_top = 7.00003
+margin_right = 248.746
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "20000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadSLabel" type="Label" parent="lootRect"]
+margin_left = 199.0
+margin_top = 8.0
+margin_right = 207.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="PortraitButton/EffectSprite/Timer" to="." method="_on_EffectSprite_Timer_timeout"]
+[connection signal="pressed" from="SelectButton" to="." method="_on_SelectButton_pressed"]
+[connection signal="pressed" from="lootRect/DropItemButton" to="." method="_on_DropItemButton_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/effort 2.ogg-c917f3cd6713a83468f4b0dc9a05dba9.oggstr"
+
+[deps]
+
+source_file="res://shared_assets/sounds/effort 2.ogg"
+dest_files=[ "res://.import/effort 2.ogg-c917f3cd6713a83468f4b0dc9a05dba9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

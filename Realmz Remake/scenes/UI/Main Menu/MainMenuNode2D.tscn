@@ -1,0 +1,471 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scenes/UI/Main Menu/Splash Screen.png" type="Texture" id=1]
+[ext_resource path="res://scenes/UI/Main Menu/ProfileButton.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/BlackChancery.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/UI/Main Menu/NewProfileButton.gd" type="Script" id=4]
+[ext_resource path="res://scenes/UI/Main Menu/QuitButton.gd" type="Script" id=5]
+[ext_resource path="res://scenes/UI/Main Menu/NewCampaignPanel.gd" type="Script" id=6]
+[ext_resource path="res://scenes/UI/Main Menu/NewCharacterPanel.gd" type="Script" id=7]
+[ext_resource path="res://scenes/UI/Main Menu/DefaultPortrait.png" type="Texture" id=8]
+[ext_resource path="res://scenes/UI/Main Menu/DefaultIcon.png" type="Texture" id=9]
+[ext_resource path="res://shared_assets/UI/buttonUP.png" type="Texture" id=10]
+[ext_resource path="res://scenes/UI/Main Menu/CharacterStatsRect/CharacterStatsRect.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/UI/Party Selection/CharPickRect.tscn" type="PackedScene" id=12]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 50, 50 )
+margin_left = 5.0
+margin_right = 5.0
+margin_top = 5.0
+margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MainMenuNode2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 204.552
+margin_top = 92.65
+margin_right = 814.552
+margin_bottom = 517.65
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 866.958
+margin_top = 552.166
+margin_right = 952.958
+margin_bottom = 575.166
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Quit Game"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfileLabel" type="Label" parent="."]
+margin_left = 17.3634
+margin_top = 17.9621
+margin_right = 71.3634
+margin_bottom = 34.9621
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Profile :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewProfileLabel" type="Label" parent="."]
+margin_left = 417.993
+margin_top = 21.8392
+margin_right = 555.994
+margin_bottom = 38.8392
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Enter Profile Name :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfileButton" type="Button" parent="."]
+margin_left = 81.0
+margin_top = 13.0519
+margin_right = 173.0
+margin_bottom = 33.0519
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfilePopupMenu" type="PopupMenu" parent="ProfileButton"]
+margin_left = -3.0
+margin_top = 16.0
+margin_right = 151.0
+margin_bottom = 36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewProfileButton" type="Button" parent="ProfileButton"]
+margin_left = 213.737
+margin_top = 5.0
+margin_right = 298.737
+margin_bottom = 25.0
+text = "New Profile"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="ProfileButton/NewProfileButton"]
+margin_left = 274.263
+margin_top = -2.0
+margin_right = 464.263
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewCharacterButton" type="Button" parent="ProfileButton"]
+margin_left = 132.257
+margin_top = 532.496
+margin_right = 242.257
+margin_bottom = 555.496
+custom_colors/font_color = Color( 1, 0.94902, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+disabled = true
+text = "New Character"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewCharacterPanel" type="Panel" parent="ProfileButton/NewCharacterButton"]
+visible = false
+margin_left = -213.0
+margin_top = -547.0
+margin_right = 805.0
+margin_bottom = 48.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="Button" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 40.7218
+margin_top = 559.51
+margin_right = 95.7218
+margin_bottom = 582.51
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OKButton" type="Button" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 928.897
+margin_top = 553.647
+margin_right = 968.897
+margin_bottom = 576.647
+custom_colors/font_color = Color( 0.00784314, 1, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+disabled = true
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnterNameLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 5.27426
+margin_top = 10.8228
+margin_right = 159.274
+margin_bottom = 27.8228
+custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Enter Character Name :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 177.883
+margin_top = 8.3604
+margin_right = 302.883
+margin_bottom = 32.3604
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 316.456
+margin_top = 14.339
+margin_right = 387.456
+margin_bottom = 28.339
+text = "[NO NAME]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 23.7509
+margin_top = 309.984
+margin_right = 159.751
+margin_bottom = 323.984
+text = "Portrait :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitRect" type="TextureRect" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 85.4703
+margin_top = 295.285
+margin_right = 129.47
+margin_bottom = 339.285
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 282.842
+margin_top = 309.865
+margin_right = 418.842
+margin_bottom = 323.865
+text = "Icon :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconRect" type="TextureRect" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 328.192
+margin_top = 295.86
+margin_right = 372.192
+margin_bottom = 339.86
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitScrollContainer" type="ScrollContainer" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 20.0
+margin_top = 60.0
+margin_right = 400.0
+margin_bottom = 290.0
+custom_styles/bg = SubResource( 1 )
+follow_focus = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PortraitContainer" type="GridContainer" parent="ProfileButton/NewCharacterButton/NewCharacterPanel/PortraitScrollContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 5.0
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconScrollContainer" type="ScrollContainer" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+visible = false
+margin_left = 20.0
+margin_top = 60.0
+margin_right = 400.0
+margin_bottom = 290.0
+custom_styles/bg = SubResource( 1 )
+follow_focus = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconContainer" type="GridContainer" parent="ProfileButton/NewCharacterButton/NewCharacterPanel/IconScrollContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 5.0
+custom_constants/vseparation = 17
+custom_constants/hseparation = 17
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToggleIcoPortButton" type="Button" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 155.0
+margin_top = 306.0
+margin_right = 258.0
+margin_bottom = 337.0
+text = "Show Icons"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClassItemList" type="ItemList" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 37.5247
+margin_top = 369.022
+margin_right = 170.525
+margin_bottom = 549.022
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RaceItemList" type="ItemList" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 193.447
+margin_top = 370.249
+margin_right = 326.447
+margin_bottom = 550.249
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClassLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 75.8129
+margin_top = 350.24
+margin_right = 116.813
+margin_bottom = 364.24
+text = "Class :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RaceLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 237.936
+margin_top = 347.907
+margin_right = 278.936
+margin_bottom = 361.907
+text = "Race :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterStatsRect" parent="ProfileButton/NewCharacterButton/NewCharacterPanel" instance=ExtResource( 11 )]
+margin_left = 447.85
+margin_top = 16.6556
+margin_right = 857.85
+margin_bottom = 538.656
+
+[node name="LevelLabel" type="Label" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 113.664
+margin_top = 36.0003
+margin_right = 156.664
+margin_bottom = 53.0003
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Level :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelMenuButton" type="MenuButton" parent="ProfileButton/NewCharacterButton/NewCharacterPanel"]
+margin_left = 172.0
+margin_top = 34.0
+margin_right = 192.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 32, 0 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewCampaignButton" type="Button" parent="ProfileButton"]
+margin_left = -18.5639
+margin_top = 531.663
+margin_right = 93.4361
+margin_bottom = 554.663
+custom_colors/font_color = Color( 1, 0.968627, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+disabled = true
+text = "Start Campaign"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewCampaignPanel" type="Panel" parent="ProfileButton/NewCampaignButton"]
+visible = false
+margin_left = -57.0
+margin_top = -543.0
+margin_right = 961.0
+margin_bottom = 52.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="Button" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 71.3538
+margin_top = 551.202
+margin_right = 161.354
+margin_bottom = 582.202
+custom_fonts/font = ExtResource( 3 )
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CampaignsLabel" type="Label" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 14.3951
+margin_top = 14.2458
+margin_right = 137.395
+margin_bottom = 31.2458
+custom_fonts/font = ExtResource( 3 )
+text = "Chose a Campaign :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CampaignsItemList" type="ItemList" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 13.0
+margin_top = 44.0
+margin_right = 209.0
+margin_bottom = 471.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedCampaignLabel" type="Label" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 245.41
+margin_top = 73.7968
+margin_right = 374.41
+margin_bottom = 90.7968
+custom_colors/font_color = Color( 0.996078, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Selected Campaign :"
+
+[node name="SelectedCampaignNameLabel" type="Label" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 245.41
+margin_top = 98.4909
+margin_right = 374.41
+margin_bottom = 115.491
+custom_colors/font_color = Color( 0.996078, 0.909804, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedCampaignDescrLabel" type="Label" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 232.0
+margin_top = 144.0
+margin_right = 381.0
+margin_bottom = 471.0
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="ProfileButton/NewCampaignButton/NewCampaignPanel"]
+margin_left = 824.0
+margin_top = 541.0
+margin_right = 901.0
+margin_bottom = 577.0
+custom_colors/font_color = Color( 0, 1, 0.054902, 1 )
+custom_fonts/font = ExtResource( 3 )
+disabled = true
+text = "Start !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharPickRect" parent="ProfileButton/NewCampaignButton/NewCampaignPanel" instance=ExtResource( 12 )]
+margin_left = 405.081
+margin_top = 0.761108
+margin_right = 1002.08
+margin_bottom = 475.761
+
+[connection signal="pressed" from="ProfileButton/NewCharacterButton/NewCharacterPanel/ToggleIcoPortButton" to="ProfileButton/NewCharacterButton/NewCharacterPanel" method="_on_ToggleIcoPortButton_pressed"]
+[connection signal="item_selected" from="ProfileButton/NewCharacterButton/NewCharacterPanel/ClassItemList" to="ProfileButton/NewCharacterButton/NewCharacterPanel" method="_on_classrace_select" binds= [ true ]]
+[connection signal="item_selected" from="ProfileButton/NewCharacterButton/NewCharacterPanel/RaceItemList" to="ProfileButton/NewCharacterButton/NewCharacterPanel" method="_on_classrace_select" binds= [ false ]]
+[connection signal="pressed" from="ProfileButton/NewCampaignButton/NewCampaignPanel/CancelButton" to="ProfileButton/NewCampaignButton/NewCampaignPanel" method="_on_CancelButton_pressed"]

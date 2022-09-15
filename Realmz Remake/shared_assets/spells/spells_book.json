@@ -1,0 +1,58 @@
+{
+"Heal Minor Wounds" :
+"
+var name : String = 'Heal Minor Wounds'
+var attributes : Array = ['Healing']
+var school : String = 'Priest'
+var level : int = 1
+var max_plevel : int = 7
+var in_field : bool = true
+var in_combat : bool = true
+var description : String = 'Instantly heals a single target in melee range\\nHeal : 1-8 x Power\\nSP cost : Power * 10'
+var resist : int = 0 #ignores resistances and dodge
+var aoe : String = 'b1'
+var los : bool = true
+var rot : bool = false
+var graphics :  Array = [-1,13]
+var sounds : Array = ['','slurpy.ogg']
+
+static func get_hits(power : int, casterchar)->int :
+	return 1
+
+static func get_min_duration(power : int, casterchar) -> int :
+	return 0
+
+static func get_max_duration(power : int, casterchar) -> int :
+	return 0
+
+static func get_duration_roll(power : int, casterchar) -> int :
+	return 0
+
+static func get_range(power : int, casterchar) -> int :
+	return 1
+	
+static func get_min_damage(power:int, casterchar) :
+	return 1*power
+	
+static func get_max_damage(power:int, casterchar) :
+	return 8*power
+	
+static func get_damage_roll(power : int, casterchar) :
+	var dmg = 0
+	var mindmg = 1
+	var maxdmg = 8
+	for i in range(power) :
+		dmg += mindmg+ randi()%maxdmg
+	return dmg
+
+static func get_sp_cost(power : int, casterchar) :
+	return power*10
+
+static func get_target_number(power : int, casterchar) :
+	return 1
+
+"
+
+		  
+
+}

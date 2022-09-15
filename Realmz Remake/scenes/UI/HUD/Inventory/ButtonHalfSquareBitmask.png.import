@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/ButtonHalfSquareBitmask.png-24d63eb253fcb3c83d1c9414ef3cbfd4.res"
+
+[deps]
+
+source_file="res://scenes/UI/HUD/Inventory/ButtonHalfSquareBitmask.png"
+dest_files=[ "res://.import/ButtonHalfSquareBitmask.png-24d63eb253fcb3c83d1c9414ef3cbfd4.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5
